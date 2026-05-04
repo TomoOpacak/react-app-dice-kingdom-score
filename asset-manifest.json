@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-app-dice-kingdom-score/static/css/main.c08e1ab0.css",
+    "main.js": "/react-app-dice-kingdom-score/static/js/main.0e84542d.js",
+    "static/js/453.dd8c5817.chunk.js": "/react-app-dice-kingdom-score/static/js/453.dd8c5817.chunk.js",
+    "index.html": "/react-app-dice-kingdom-score/index.html",
+    "main.c08e1ab0.css.map": "/react-app-dice-kingdom-score/static/css/main.c08e1ab0.css.map",
+    "main.0e84542d.js.map": "/react-app-dice-kingdom-score/static/js/main.0e84542d.js.map",
+    "453.dd8c5817.chunk.js.map": "/react-app-dice-kingdom-score/static/js/453.dd8c5817.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c08e1ab0.css",
+    "static/js/main.0e84542d.js"
+  ]
+}
