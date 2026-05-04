@@ -49,8 +49,18 @@ export function calculateScore(playerCards = [], duke, bonusVP = 0) {
     });
   }
 
-  // NO DUKE
+  // NO DUKE → still apply bonus
   if (!duke || !Array.isArray(duke.rules)) {
+    total += bonusVP;
+
+    if (bonusVP !== 0) {
+      breakdown.push({
+        type: "bonus",
+        label: "Bonus VP",
+        value: bonusVP,
+      });
+    }
+
     return { total, breakdown };
   }
 

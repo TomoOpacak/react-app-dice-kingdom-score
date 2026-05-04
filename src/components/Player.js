@@ -1,9 +1,11 @@
-import { useState, useEffect, useMemo } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import { cards } from "../data/cards";
 import { dukes } from "../data/dukes";
 import { calculateScore } from "../game/scoring";
 import CardPicker from "./CardPicker";
 import DukePicker from "./DukePicker";
+import { t } from "../data/labels";
 import "../css/style.css";
 
 export default function Player({ name }) {
@@ -29,6 +31,8 @@ export default function Player({ name }) {
       />
     </svg>
   );
+  const [showResetConfirm, setShowResetConfirm] = useState(false);
+  const [gameStarted, setGameStarted] = useState(false);
   const [playerCards, setPlayerCards] = useState(() => {
     return JSON.parse(localStorage.getItem("playerCards")) || [];
   });
@@ -55,10 +59,7 @@ export default function Player({ name }) {
   useEffect(() => {
     localStorage.setItem("bonusVP", bonusVP);
   }, [bonusVP]);
-  const score = useMemo(
-    () => calculateScore(playerCards, duke, bonusVP),
-    [playerCards, duke, bonusVP],
-  );
+  const score = calculateScore(playerCards, duke, Number(bonusVP));
 
   const addCard = (card) => {
     const newCard = {
@@ -112,109 +113,183 @@ export default function Player({ name }) {
 
   return (
     <div className="player-container">
-      <h2>{name}</h2>
-      <h3>Bonus PB:</h3>
-      {/* 🔵 BONUS VP TRACKER */}
-      <div className="vp-tracker">
-        <button className="vp-button" onClick={() => setBonusVP((v) => v - 1)}>
-          −
-        </button>
+      {!gameStarted && (
+        <div className="start-overlay">
+          <div className="start-modal">
+            <div className="front">
+              <img
+                src={`${process.env.PUBLIC_URL}/assets/icons/dice_icon_l.webp`}
+                alt="Dice Icon"
+                className="dice-icon-left wobble-image"
+              />
+              <h1 className="main-title">Kraljevstvo Kockica</h1>
+              <img
+                src={`${process.env.PUBLIC_URL}/assets/icons/dice_icon_r.webp`}
+                alt="Dice Icon"
+                className="dice-icon-right wobble-image"
+              />
+            </div>
 
-        <div className="vp-value">{bonusVP}</div>
-
-        <button className="vp-button" onClick={() => setBonusVP((v) => v + 1)}>
-          +
-        </button>
-      </div>
-
-      {/* MONSTER / CITIZEN / DOMAIN */}
-      {renderSection("monster", "monster-section")}
-      {renderSection("citizen", "citizen-section")}
-      {renderSection("domain", "domain-section")}
-
-      <div className="duke-section">
-        {duke ? (
-          <div className="card duke-selected">
-            <img src={duke.image} className="card-image-small" />
-
-            <button className="remove-btn" onClick={() => setDuke(null)}>
-              ✕
+            <p>Dobrodošli u Kraljevstvo Kockica!</p>
+            <button
+              className="start-button"
+              onClick={() => setGameStarted(true)}
+            >
+              Započni Igru
             </button>
-          </div>
-        ) : (
-          <button
-            className="duke-button"
-            onClick={() => setShowDukePicker(true)}
-          >
-            +
-          </button>
-        )}
-      </div>
-      <h3>Total Score:</h3>
-      <div className="score-display">
-        <div className="score">{score.total}</div>
-      </div>
-
-      {showScore && (
-        <div className="modal-overlay">
-          <div className="modal">
-            <h2>Bodovanje</h2>
-
-            <h3>
-              Ukupno: {score.total}
-              <Crown />
-            </h3>
-
-            <ul>
-              <div>OSNOVNO</div>
-              {score.breakdown
-                .filter((b) => b.type === "base")
-                .map((b, i) => (
-                  <li key={i}>
-                    {b.label}: {b.value} <Crown />
-                  </li>
-                ))}
-
-              <div>PLEMIĆ</div>
-              {score.breakdown
-                .filter((b) => b.type === "duke")
-                .map((b, i) => (
-                  <li key={i}>
-                    {b.label}: {b.count} × {b.multiplier} = {b.value}
-                    <Crown />
-                  </li>
-                ))}
-            </ul>
-
-            <button onClick={() => setShowScore(false)}>Zatvori</button>
           </div>
         </div>
       )}
-      <button onClick={() => setShowScore(true)}>Prikaži Rezultat</button>
-      <button className="reset-btn" onClick={resetGame}>
-        Reset Game
-      </button>
 
-      {/* CARD PICKER */}
+      {gameStarted && (
+        <>
+          <h2>{name}</h2>
 
-      {picker && (
-        <CardPicker
-          category={picker}
-          onSelect={addCard}
-          onClose={() => setPicker(null)}
-        />
+          <h3>Bonus PB:</h3>
+          <div className="vp-tracker">
+            <button
+              className="vp-button"
+              onClick={() => setBonusVP((v) => v - 1)}
+            >
+              −
+            </button>
+
+            <div className="vp-value">{bonusVP}</div>
+
+            <button
+              className="vp-button"
+              onClick={() => setBonusVP((v) => v + 1)}
+            >
+              +
+            </button>
+          </div>
+
+          {renderSection("monster", "monster-section")}
+          {renderSection("citizen", "citizen-section")}
+          {renderSection("domain", "domain-section")}
+
+          <div className="duke-section">
+            {duke ? (
+              <div className="card duke-selected">
+                <img src={duke.image} className="card-image-small" />
+
+                <button className="remove-btn" onClick={() => setDuke(null)}>
+                  ✕
+                </button>
+              </div>
+            ) : (
+              <button
+                className="duke-button"
+                onClick={() => setShowDukePicker(true)}
+              >
+                +
+              </button>
+            )}
+          </div>
+
+          <h3>Total Score:</h3>
+          <div className="score-display">
+            <div className="score">{score.total}</div>
+          </div>
+
+          {showScore && (
+            <div className="modal-overlay">
+              <div className="modal">
+                <h2>Bodovanje</h2>
+
+                <h3>
+                  Ukupno: {score.total}
+                  <Crown />
+                </h3>
+
+                <ul>
+                  <div>OSNOVNO</div>
+
+                  {score.breakdown
+                    .filter((b) => b.type === "bonus")
+                    .map((b, i) => (
+                      <li key={i}>
+                        {b.label}: {b.value} <Crown />
+                      </li>
+                    ))}
+
+                  {score.breakdown
+                    .filter((b) => b.type === "base")
+                    .map((b, i) => (
+                      <li key={i}>
+                        {b.label}: {b.value} <Crown />
+                      </li>
+                    ))}
+
+                  <div>PLEMIĆ</div>
+
+                  {score.breakdown
+                    .filter((b) => b.type === "duke")
+                    .map((b, i) => (
+                      <li key={i}>
+                        {t(b.label)}: {b.count} × {b.multiplier} = {b.value}
+                        <Crown />
+                      </li>
+                    ))}
+                </ul>
+
+                <button onClick={() => setShowScore(false)}>Zatvori</button>
+              </div>
+            </div>
+          )}
+
+          <button onClick={() => setShowScore(true)}>Prikaži Rezultat</button>
+          <button
+            className="reset-btn"
+            onClick={() => setShowResetConfirm(true)}
+          >
+            Završi Igru
+          </button>
+
+          {picker && (
+            <CardPicker
+              category={picker}
+              onSelect={addCard}
+              onClose={() => setPicker(null)}
+            />
+          )}
+
+          {showDukePicker && (
+            <DukePicker
+              dukes={dukes}
+              onSelect={(d) => {
+                setDuke(d);
+                setShowDukePicker(false);
+              }}
+              onClose={() => setShowDukePicker(false)}
+            />
+          )}
+        </>
       )}
+      {showResetConfirm && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <p>Jeste li sigurni da želite završiti igru?</p>
 
-      {/* DUKE PICKER */}
-      {showDukePicker && (
-        <DukePicker
-          dukes={dukes}
-          onSelect={(d) => {
-            setDuke(d);
-            setShowDukePicker(false);
-          }}
-          onClose={() => setShowDukePicker(false)}
-        />
+            <div>
+              <button
+                className="close-btn"
+                onClick={() => {
+                  resetGame();
+                  setShowResetConfirm(false);
+                }}
+              >
+                Da
+              </button>
+              <button
+                className="reset-btn"
+                onClick={() => setShowResetConfirm(false)}
+              >
+                Ne
+              </button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

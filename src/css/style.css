@@ -1,11 +1,62 @@
 @import "card-picker-modal.css";
+@import "start-modal.css";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Light", sans-serif;
 }
+@font-face {
+  font-family: "Dwarf";
+  src:
+    local("dwarvenaxe-bb-w00-regular"),
+    url("/src/fonts/dwarvenaxe-bb-w00-regular.ttf") format("truetype");
+}
+.wobble-image {
+  display: inline-block;
+  width: 200px; /* or any size you want */
+  height: auto;
+
+  /* smooth scaling and wobble */
+  animation: pulseWobble 2s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+/* combined pulse + wobble */
+@keyframes pulseWobble {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.05) rotate(3deg);
+  }
+  50% {
+    transform: scale(1) rotate(-3deg);
+  }
+  75% {
+    transform: scale(1.05) rotate(3deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+.dice-icon-left {
+  width: 60px;
+  height: auto;
+  margin-left: 2rem;
+}
+.dice-icon-right {
+  width: 60px;
+  height: auto;
+  margin-right: 2rem;
+}
+.front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 h1 {
+  font-family: "Dwarf", sans-serif;
   text-align: center;
   margin: 20px 0;
 }
@@ -88,9 +139,13 @@ h1 {
   transform: scale(0.95);
 }
 .duke-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Dwarf", sans-serif;
   width: 50px;
   height: 50px;
-  font-size: 40px;
+  font-size: 90px;
   background: #924699;
   color: white;
   border: none;
