@@ -1,0 +1,169 @@
+@import "card-picker-modal.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Light", sans-serif;
+}
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+.player-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.duke-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* COLORS */
+.monster-section {
+  background: #f5f5f5;
+}
+.monster-section-button {
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+  background: #999;
+  color: white;
+  border: none;
+  outline: none;
+}
+.monster-section-button:active {
+  background: #222;
+  transform: scale(0.95);
+}
+.citizen-section {
+  background: #e6f0ff;
+}
+.citizen-section-button {
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+  background: #5192c7;
+  color: white;
+  border: none;
+  outline: none;
+}
+.citizen-section-button:active {
+  background: #242296;
+  transform: scale(0.95);
+}
+.domain-section {
+  background: #e6ffe6;
+}
+.domain-section-button {
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+  background: #4fc769;
+  color: white;
+  border: none;
+  outline: none;
+}
+.domain-section-button:active {
+  background: #1c7c31;
+  transform: scale(0.95);
+}
+.duke-button {
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+  background: #924699;
+  color: white;
+  border: none;
+  outline: none;
+}
+.duke-button:active {
+  background: #8116a1;
+  transform: scale(0.95);
+}
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.card {
+  position: relative;
+}
+
+.remove-btn {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  border: none;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.vp-tracker {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.duke-section {
+  background: #f3e6ff;
+}
+
+.duke-section select {
+  width: 100%;
+  padding: 5px;
+}
+
+.score-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.vp-icon {
+  width: 100 px;
+  height: 100px;
+}
+.score {
+  text-decoration: bold;
+  font-size: 32px;
+}
+.vp-button {
+  padding: 5px 10px;
+  font-size: 50px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.vp-button:active {
+  transform: scale(0.95);
+}
+.vp-value {
+  font-size: 50px;
+}

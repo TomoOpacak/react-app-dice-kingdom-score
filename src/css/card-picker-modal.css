@@ -1,0 +1,70 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  width: 90%;
+  max-width: 400px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.card-list {
+  max-height: 300px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card-item {
+  display: block;
+  width: 50%;
+}
+
+.close-btn {
+  margin-top: 10px;
+  width: 100%;
+}
+.card-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 6px;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+
+  border-radius: 6px;
+}
+.card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-image-small {
+  width: 70px;
+  height: auto;
+
+  border-radius: 4px;
+}
+.duke-card {
+  background: #f3e6ff;
+}
