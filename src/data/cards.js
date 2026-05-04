@@ -1,3 +1,5 @@
+const IMG = process.env.PUBLIC_URL;
+
 export const cards = [
   // CITIZENS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
   {
@@ -7,7 +9,7 @@ export const cards = [
     tagCounts: { hero: 1 },
     baseVP: 0,
     value: 1,
-    image: "/assets/cards/citizens/egzorcist.webp",
+    image: IMG + "/assets/cards/citizens/egzorcist.webp",
   },
   {
     id: "monk",
@@ -16,7 +18,7 @@ export const cards = [
     tagCounts: { hero: 1 },
     baseVP: 0,
     value: 1,
-    image: "/assets/cards/citizens/monk.webp",
+    image: IMG + "/assets/cards/citizens/monk.webp",
   },
   {
     id: "shapeshifter",
@@ -25,7 +27,7 @@ export const cards = [
     tagCounts: { hero: 1 },
     baseVP: 0,
     value: 1,
-    image: "/assets/cards/citizens/shapeshifter.webp",
+    image: IMG + "/assets/cards/citizens/shapeshifter.webp",
   },
   {
     id: "priestess",
@@ -34,7 +36,7 @@ export const cards = [
     tagCounts: { hero: 1 },
     baseVP: 0,
     value: 1,
-    image: "/assets/cards/citizens/priestess.webp",
+    image: IMG + "/assets/cards/citizens/priestess.webp",
   },
   {
     id: "lumberjack",
@@ -43,7 +45,7 @@ export const cards = [
     tagCounts: { worker: 1 },
     baseVP: 0,
     value: 2,
-    image: "/assets/cards/citizens/lumberjack.webp",
+    image: IMG + "/assets/cards/citizens/lumberjack.webp",
   },
   {
     id: "trader",
@@ -52,7 +54,7 @@ export const cards = [
     tagCounts: { worker: 1 },
     baseVP: 0,
     value: 2,
-    image: "/assets/cards/citizens/trader.webp",
+    image: IMG + "/assets/cards/citizens/trader.webp",
   },
   {
     id: "bard",
@@ -61,7 +63,7 @@ export const cards = [
     tagCounts: { worker: 1 },
     baseVP: 0,
     value: 2,
-    image: "/assets/cards/citizens/bard.webp",
+    image: IMG + "/assets/cards/citizens/bard.webp",
   },
   {
     id: "blacksmith",
@@ -70,7 +72,7 @@ export const cards = [
     tagCounts: { worker: 1 },
     baseVP: 0,
     value: 2,
-    image: "/assets/cards/citizens/blacksmith.webp",
+    image: IMG + "/assets/cards/citizens/blacksmith.webp",
   },
   {
     id: "alchemist",
@@ -79,6 +81,7 @@ export const cards = [
     tagCounts: { rogue: 1 },
     baseVP: 0,
     value: 3,
+    image: IMG + "/assets/cards/citizens/alchemist.webp",
   },
 
   {
@@ -88,7 +91,7 @@ export const cards = [
     tagCounts: { worker: 1 },
     baseVP: 0,
     value: 5,
-    image: "/assets/cards/citizens/peasant_1.webp",
+    image: IMG + "/assets/cards/citizens/peasant_1.webp",
   },
   //DOMAINS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
   {
