@@ -145,13 +145,13 @@ export default function Player({ name }) {
         <>
           <h2>{name}</h2>
 
-          <h3>Bonus PB:</h3>
+          <h3>Dodatni PB:</h3>
           <div className="vp-tracker">
             <button
               className="vp-button"
               onClick={() => setBonusVP((v) => v - 1)}
             >
-              −
+              -
             </button>
 
             <div className="vp-value">{bonusVP}</div>
@@ -187,7 +187,7 @@ export default function Player({ name }) {
             )}
           </div>
 
-          <h3>Total Score:</h3>
+          <h3>Ukupno:</h3>
           <div className="score-display">
             <div className="score">{score.total}</div>
           </div>
@@ -195,7 +195,7 @@ export default function Player({ name }) {
           {showScore && (
             <div className="modal-overlay">
               <div className="modal">
-                <h2>Bodovanje</h2>
+                <h2>Detaljno Bodovanje</h2>
 
                 <h3>
                   Ukupno: {score.total}
@@ -233,19 +233,26 @@ export default function Player({ name }) {
                     ))}
                 </ul>
 
-                <button onClick={() => setShowScore(false)}>Zatvori</button>
+                <button
+                  className="close-btn"
+                  onClick={() => setShowScore(false)}
+                >
+                  Zatvori
+                </button>
               </div>
             </div>
           )}
-
-          <button onClick={() => setShowScore(true)}>Prikaži Rezultat</button>
-          <button
-            className="reset-btn"
-            onClick={() => setShowResetConfirm(true)}
-          >
-            Završi Igru
-          </button>
-
+          <div className="score-btn-row">
+            <button className="score-btn" onClick={() => setShowScore(true)}>
+              Rezultat
+            </button>
+            <button
+              className="close-btn"
+              onClick={() => setShowResetConfirm(true)}
+            >
+              Završi Igru
+            </button>
+          </div>
           {picker && (
             <CardPicker
               category={picker}

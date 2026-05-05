@@ -4,13 +4,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Light", sans-serif;
 }
 @font-face {
   font-family: "Dwarf";
   src:
     local("dwarvenaxe-bb-w00-regular"),
     url("/src/fonts/dwarvenaxe-bb-w00-regular.ttf") format("truetype");
+}
+body {
+  background: #f0f0f0;
 }
 .wobble-image {
   display: inline-block;
@@ -60,6 +62,10 @@ h1 {
   text-align: center;
   margin: 20px 0;
 }
+h3 {
+  font-family: "Dwarf", sans-serif;
+  text-align: center;
+}
 .player-container {
   display: flex;
   flex-direction: column;
@@ -94,9 +100,14 @@ h1 {
   background: #f5f5f5;
 }
 .monster-section-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Dwarf", sans-serif;
   width: 50px;
   height: 50px;
-  font-size: 40px;
+  font-size: 90px;
+  border-radius: 5px;
   background: #999;
   color: white;
   border: none;
@@ -110,9 +121,14 @@ h1 {
   background: #e6f0ff;
 }
 .citizen-section-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Dwarf", sans-serif;
   width: 50px;
   height: 50px;
-  font-size: 40px;
+  font-size: 90px;
+  border-radius: 5px;
   background: #5192c7;
   color: white;
   border: none;
@@ -126,9 +142,14 @@ h1 {
   background: #e6ffe6;
 }
 .domain-section-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Dwarf", sans-serif;
   width: 50px;
   height: 50px;
-  font-size: 40px;
+  font-size: 90px;
+  border-radius: 5px;
   background: #4fc769;
   color: white;
   border: none;
@@ -146,6 +167,8 @@ h1 {
   width: 50px;
   height: 50px;
   font-size: 90px;
+  border-radius: 5px;
+
   background: #924699;
   color: white;
   border: none;
@@ -180,7 +203,7 @@ h1 {
   cursor: pointer;
 }
 .vp-tracker {
-  width: 50%;
+  width: 35%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -209,8 +232,13 @@ h1 {
   font-size: 32px;
 }
 .vp-button {
-  padding: 5px 10px;
-  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Dwarf", sans-serif;
+  width: 50px;
+  height: 50px;
+  font-size: 90px;
   border: none;
   outline: none;
   background: transparent;
@@ -221,4 +249,5 @@ h1 {
 }
 .vp-value {
   font-size: 50px;
+  font-family: "Dwarf", sans-serif;
 }

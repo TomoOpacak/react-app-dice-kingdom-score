@@ -8,7 +8,7 @@ export default function DukePicker({ dukes, onSelect, onClose }) {
           {dukes.map((d) => (
             <button
               key={d.id}
-              className="card-item duke-card"
+              className="card-item"
               onClick={() => onSelect(d)}
             >
               <img src={d.image} alt={d.name} className="card-image" />

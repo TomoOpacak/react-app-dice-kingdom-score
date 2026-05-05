@@ -11,6 +11,8 @@
 }
 
 .modal {
+  display: flex;
+  flex-direction: column;
   background: white;
   width: 90%;
   max-width: 400px;
@@ -22,25 +24,45 @@
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
+  font-family: "Dwarf", sans-serif;
+  font-size: 40px;
 }
 
 .card-list {
-  max-height: 300px;
+  max-height: 400px;
   overflow-y: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
-.card-item {
-  display: block;
-  width: 50%;
+.score-btn-row {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.score-btn {
+  background: rgb(92, 83, 83);
+  color: white;
+  font-family: "Dwarf", sans-serif;
+  padding: 8px 16px;
+  font-size: 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
+.score-btn:active {
+  background: rgb(34, 32, 32);
+  transform: scale(0.95);
+}
 .close-btn {
+  font-family: "Dwarf", sans-serif;
   background: rgb(255, 57, 57);
   color: white;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
+  margin-top: 10px;
+  padding: 8px 16px;
+
+  font-size: 32px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -50,6 +72,7 @@
   background: rgb(175, 36, 36);
   transform: scale(0.95);
 }
+
 .card-item {
   display: flex;
   align-items: center;
@@ -74,7 +97,4 @@
   height: auto;
 
   border-radius: 4px;
-}
-.duke-card {
-  background: #f3e6ff;
 }
