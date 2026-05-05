@@ -43,6 +43,7 @@ p {
   font-family: "Dwarf", sans-serif;
   color: rgba(0, 0, 0, 0.5);
   font-size: 24px;
+  margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -51,4 +52,12 @@ p {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+.logo-title {
+  width: 100%;
+  max-width: 750px;
+  margin-bottom: 25px;
+}
+.greet-messagge {
+  margin-top: 50px;
 }

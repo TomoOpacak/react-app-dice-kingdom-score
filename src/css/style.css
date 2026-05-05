@@ -60,11 +60,12 @@ body {
 h1 {
   font-family: "Dwarf", sans-serif;
   text-align: center;
-  margin: 20px 0;
+  margin-top: 20px;
 }
 h3 {
   font-family: "Dwarf", sans-serif;
   text-align: center;
+  font-size: 36px;
 }
 .player-container {
   display: flex;
@@ -204,7 +205,7 @@ h3 {
   font-size: 16px;
 }
 .vp-tracker {
-  width: 35%;
+  width: 50%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -219,14 +220,19 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
 }
 .vp-icon {
-  width: 100 px;
-  height: 100px;
+  width: 100px;
 }
+.vp-icon-small {
+  width: 40px;
+}
+
 .score {
-  text-decoration: bold;
-  font-size: 32px;
+  font-family: "Dwarf", sans-serif;
+
+  font-size: 100px;
 }
 .vp-button {
   display: flex;
@@ -234,8 +240,8 @@ h3 {
   justify-content: center;
   font-family: "Dwarf", sans-serif;
   width: 50px;
-  height: 50px;
-  font-size: 90px;
+  height: 90px;
+  font-size: 100px;
   border: none;
   outline: none;
   background: transparent;
@@ -248,23 +254,58 @@ h3 {
   font-size: 50px;
   font-family: "Dwarf", sans-serif;
 }
+.vp-number {
+  color: #fff;
+  -webkit-text-stroke: 3px #1e1e1e;
+}
 .card.stacked {
   position: relative;
 }
 
 /* count badge */
-.card-count {
+.monster-card-count {
   width: 40px;
   height: 60px;
   position: absolute;
   top: 35px;
   left: 30px;
   text-align: center;
-
-  background: #7c3aed;
+  background: #585858;
   color: white;
   font-size: 42px;
-  font-weight: bold;
+
+  font-family: "Dwarf", sans-serif;
+  padding: 6px 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.citizen-card-count {
+  width: 40px;
+  height: 60px;
+  position: absolute;
+  top: 35px;
+  left: 30px;
+  text-align: center;
+  background: #2971c2;
+  color: white;
+  font-size: 42px;
+
+  font-family: "Dwarf", sans-serif;
+  padding: 6px 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.domain-card-count {
+  width: 40px;
+  height: 60px;
+  position: absolute;
+  top: 35px;
+  left: 30px;
+  text-align: center;
+  background: #369c44;
+  color: white;
+  font-size: 42px;
+  font-family: "Dwarf", sans-serif;
   padding: 6px 8px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
@@ -328,4 +369,67 @@ h3 {
   flex-wrap: wrap;
   gap: 8px;
   justify-content: center;
+}
+.vp-icon {
+  transition: transform 0.2s ease;
+}
+
+/* ➕ Pulse OUT */
+.pulse-up {
+  animation: pulseUp 0.3s ease;
+}
+
+@keyframes pulseUp {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ➖ Pulse IN */
+.pulse-down {
+  animation: pulseDown 0.3s ease;
+}
+
+@keyframes pulseDown {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+li {
+  font-family: "Dwarf", sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 28px;
+}
+
+.duke-name {
+  font-family: "Dwarf", sans-serif;
+  color: rgb(0, 0, 0);
+  font-size: 32px;
+  margin-top: 20px;
+  text-decoration: underline;
+}
+.score-row {
+  display: flex;
+  align-items: center; /* 👈 vertical center */
+  gap: 6px;
+}
+
+.vp-inline-icon {
+  display: block; /* 👈 removes inline weirdness */
+}
+.main-score {
+  margin: 20px 0;
 }
