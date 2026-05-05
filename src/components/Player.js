@@ -114,13 +114,6 @@ export default function Player({ name }) {
 
     return (
       <div className={`section ${className}`}>
-        <button
-          className={`${className}-button`}
-          onClick={() => setPicker(category)}
-        >
-          +
-        </button>
-
         <div className="card-grid">
           {groupedCards.map((card) => {
             const isExpanded = expandedStacks[card.name];
@@ -208,6 +201,12 @@ export default function Player({ name }) {
             );
           })}
         </div>
+        <button
+          className={`${className}-button`}
+          onClick={() => setPicker(category)}
+        >
+          +
+        </button>
       </div>
     );
   };
@@ -271,7 +270,7 @@ export default function Player({ name }) {
           <div className="duke-section">
             {duke ? (
               <div className="card duke-selected">
-                <img src={duke.image} className="card-image-small" />
+                <img src={duke.image} className="card-image-duke" />
 
                 <button className="remove-btn" onClick={() => setDuke(null)}>
                   ✕

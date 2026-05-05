@@ -155,12 +155,16 @@
 }
 
 .card-image-small {
-  width: 70px;
+  width: 100px;
   height: auto;
 
-  border-radius: 4px;
+  border-radius: 8px;
 }
-
+.card-image-duke {
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+}
 .reset-btn {
   font-family: "Dwarf", sans-serif;
   color: #93267b;

@@ -183,6 +183,7 @@ h3 {
   justify-content: center;
   gap: 8px;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .card {
@@ -191,15 +192,16 @@ h3 {
 
 .remove-btn {
   position: absolute;
-  top: -6px;
-  right: -6px;
+  top: -7px;
+  right: -7px;
   border: none;
   background: red;
   color: white;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
+  font-size: 16px;
 }
 .vp-tracker {
   width: 35%;
@@ -252,15 +254,19 @@ h3 {
 
 /* count badge */
 .card-count {
+  width: 40px;
+  height: 60px;
   position: absolute;
-  top: 25px;
-  left: 20px;
+  top: 35px;
+  left: 30px;
+  text-align: center;
+
   background: #7c3aed;
   color: white;
-  font-size: 28px;
+  font-size: 42px;
   font-weight: bold;
   padding: 6px 8px;
-  border-radius: 999px;
+  border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 /* wrapper stays clean */
@@ -275,13 +281,11 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   gap: 8px;
   justify-content: center;
   padding: 10px;
-  margin-top: 6px;
 
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(248, 250, 117, 0.9);
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 
