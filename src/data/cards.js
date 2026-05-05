@@ -103,20 +103,31 @@ export const cards = [
   },
   // MONSTERS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
   {
-    id: "deep_sea_1",
+    id: "deep_1",
     name: "Brazdenjak",
     category: "monster",
     tagCounts: { wild: 1 },
     baseVP: 1,
     value: 1,
+    image: IMG + "/assets/cards/monsters/deep_1.webp",
   },
   {
-    id: "deep_sea_2",
+    id: "deep_3",
     name: "Morska Vještica",
     category: "monster",
     tagCounts: { titan: 1 },
     baseVP: 5,
     value: 1,
+    image: IMG + "/assets/cards/monsters/deep_3.webp",
+  },
+  {
+    id: "deep_4",
+    name: "Kraken",
+    category: "monster",
+    tagCounts: { boss: 1 },
+    baseVP: 5,
+    value: 1,
+    image: IMG + "/assets/cards/monsters/deep_4.webp",
   },
   {
     id: "barrens_1",

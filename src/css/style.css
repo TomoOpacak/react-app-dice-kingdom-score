@@ -12,7 +12,7 @@
     url("/src/fonts/dwarvenaxe-bb-w00-regular.ttf") format("truetype");
 }
 body {
-  background: #f0f0f0;
+  background: linear-gradient(rgb(212, 247, 243), rgb(221, 229, 192));
 }
 .wobble-image {
   display: inline-block;
@@ -89,10 +89,9 @@ h3 {
   flex-direction: column;
   align-items: center;
   width: 95%;
+  background: transparent;
   margin-top: 15px;
   padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
 }
 
 /* COLORS */
@@ -104,10 +103,10 @@ h3 {
   align-items: center;
   justify-content: center;
   font-family: "Dwarf", sans-serif;
-  width: 50px;
-  height: 50px;
-  font-size: 90px;
-  border-radius: 5px;
+  width: 80px;
+  height: 80px;
+  font-size: 120px;
+  border-radius: 8px;
   background: #999;
   color: white;
   border: none;
@@ -125,10 +124,10 @@ h3 {
   align-items: center;
   justify-content: center;
   font-family: "Dwarf", sans-serif;
-  width: 50px;
-  height: 50px;
-  font-size: 90px;
-  border-radius: 5px;
+  width: 80px;
+  height: 80px;
+  font-size: 120px;
+  border-radius: 8px;
   background: #5192c7;
   color: white;
   border: none;
@@ -146,10 +145,10 @@ h3 {
   align-items: center;
   justify-content: center;
   font-family: "Dwarf", sans-serif;
-  width: 50px;
-  height: 50px;
-  font-size: 90px;
-  border-radius: 5px;
+  width: 80px;
+  height: 80px;
+  font-size: 120px;
+  border-radius: 8px;
   background: #4fc769;
   color: white;
   border: none;
@@ -164,10 +163,10 @@ h3 {
   align-items: center;
   justify-content: center;
   font-family: "Dwarf", sans-serif;
-  width: 50px;
-  height: 50px;
-  font-size: 90px;
-  border-radius: 5px;
+  width: 80px;
+  height: 80px;
+  font-size: 120px;
+  border-radius: 8px;
 
   background: #924699;
   color: white;
@@ -209,10 +208,6 @@ h3 {
   justify-content: space-between;
 }
 
-.duke-section {
-  background: #f3e6ff;
-}
-
 .duke-section select {
   width: 100%;
   padding: 5px;
@@ -250,4 +245,83 @@ h3 {
 .vp-value {
   font-size: 50px;
   font-family: "Dwarf", sans-serif;
+}
+.card.stacked {
+  position: relative;
+}
+
+/* count badge */
+.card-count {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  background: #7c3aed;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 6px 8px;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+/* wrapper stays clean */
+.card-stack-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* expanded container = soft panel */
+.expanded-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 8px;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 6px;
+
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+  backdrop-filter: blur(4px);
+}
+
+/* cards inside expanded */
+.expanded-stack .card {
+  transition: transform 0.2s ease;
+}
+
+.expanded-stack .card:hover {
+  transform: translateY(-4px) scale(1.05);
+}
+
+/* nicer collapse button */
+.collapse-btn {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(rgb(147, 38, 123), rgb(91, 0, 66));
+  color: white;
+  box-shadow:
+    0 4px 9px rgba(0, 0, 0, 0.36),
+    inset 0 0 10px #000;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+  padding: 16px;
+  font-size: 1px;
+
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.collapse-btn:active {
+  transform: scale(0.95);
+}
+.expanded-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
 }

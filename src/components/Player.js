@@ -51,7 +51,14 @@ export default function Player({ name }) {
   const [showScore, setShowScore] = useState(false);
   const [picker, setPicker] = useState(null);
   const [showDukePicker, setShowDukePicker] = useState(false);
+  const [expandedStacks, setExpandedStacks] = useState({});
 
+  const toggleStack = (key) => {
+    setExpandedStacks((prev) => ({
+      ...prev,
+      [key]: !prev[key],
+    }));
+  };
   // NEW: manual VP tracker
   const [bonusVP, setBonusVP] = useState(() => {
     return Number(localStorage.getItem("bonusVP")) || 0;
@@ -78,7 +85,32 @@ export default function Player({ name }) {
   const renderSection = (category, className) => {
     const sectionCards = playerCards
       .filter((c) => c.category === category)
-      .sort((a, b) => (a.value || 0) - (b.value || 0));
+      .slice() // 👈 important (clone)
+      .sort((a, b) => (a.value ?? 0) - (b.value ?? 0));
+
+    const groupedCards = Object.values(
+      sectionCards.reduce((acc, card) => {
+        // 👇 MONSTER SPECIAL RULE
+        const stackKey =
+          category === "monster"
+            ? `monster-${card.value}` // 👈 STACK BY VALUE
+            : card.name; // 👈 OTHERS STILL BY NAME
+
+        if (!acc[stackKey]) {
+          acc[stackKey] = {
+            ...card,
+            count: 0,
+            instances: [],
+            stackKey,
+          };
+        }
+
+        acc[stackKey].count++;
+        acc[stackKey].instances.push(card.instanceId);
+
+        return acc;
+      }, {}),
+    );
 
     return (
       <div className={`section ${className}`}>
@@ -90,22 +122,91 @@ export default function Player({ name }) {
         </button>
 
         <div className="card-grid">
-          {sectionCards.map((card, index) => (
-            <div key={index} className="card">
-              <img
-                src={card.image}
-                alt={card.name}
-                className="card-image-small"
-              />
+          {groupedCards.map((card) => {
+            const isExpanded = expandedStacks[card.name];
 
-              <button
-                className="remove-btn"
-                onClick={() => removeCard(card.instanceId)}
-              >
-                ✕
-              </button>
-            </div>
-          ))}
+            return (
+              <div key={card.name} className="card-stack-wrapper">
+                {/* STACKED VIEW */}
+                {!isExpanded && (
+                  <div
+                    className="card stacked"
+                    onClick={() => {
+                      if (card.count > 1) {
+                        toggleStack(card.name);
+                      }
+                    }}
+                  >
+                    <img src={card.image} className="card-image-small" />
+
+                    {card.count > 1 && (
+                      <div className="card-count">{card.count}</div>
+                    )}
+
+                    <button
+                      className="remove-btn"
+                      onClick={(e) => {
+                        e.stopPropagation(); // 👈 IMPORTANT
+                        removeCard(card.instances[0]);
+                      }}
+                    >
+                      ✕
+                    </button>
+                  </div>
+                )}
+
+                {/* EXPANDED VIEW */}
+                {isExpanded && (
+                  <div className="expanded-stack">
+                    <div className="expanded-cards">
+                      {card.instances.map((id) => {
+                        const realCard = playerCards.find(
+                          (c) => c.instanceId === id,
+                        );
+
+                        return (
+                          <div key={id} className="card">
+                            <img
+                              src={realCard.image}
+                              className="card-image-small"
+                            />
+
+                            <button
+                              className="remove-btn"
+                              onClick={() => removeCard(id)}
+                            >
+                              ✕
+                            </button>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    {/* collapse button */}
+                    <button
+                      className="collapse-btn"
+                      onClick={() => toggleStack(card.name)}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="icon-style"
+                      >
+                        <polyline points="9 18 3 12 9 6" />
+                        <path d="M3 12h12a6 6 0 0 1 0 12" />
+                      </svg>
+                    </button>
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     );
@@ -130,12 +231,11 @@ export default function Player({ name }) {
               />
             </div>
 
-            <p>Dobrodošli u Kraljevstvo Kockica!</p>
             <button
               className="start-button"
               onClick={() => setGameStarted(true)}
             >
-              Započni Igru
+              POKRENI IGRU
             </button>
           </div>
         </div>
@@ -243,11 +343,11 @@ export default function Player({ name }) {
             </div>
           )}
           <div className="score-btn-row">
-            <button className="score-btn" onClick={() => setShowScore(true)}>
-              Rezultat
+            <button className="start-button" onClick={() => setShowScore(true)}>
+              REZULTAT
             </button>
             <button
-              className="close-btn"
+              className="end-btn"
               onClick={() => setShowResetConfirm(true)}
             >
               Završi Igru
@@ -276,23 +376,28 @@ export default function Player({ name }) {
       {showResetConfirm && (
         <div className="modal-overlay">
           <div className="modal">
-            <p>Jeste li sigurni da želite završiti igru?</p>
+            <h1>Jeste li sigurni?</h1>
+            <p>
+              Završetkom igre resetiraju se svi brojači i vraćate se na početni
+              zaslon.
+            </p>
 
-            <div>
+            <div className="modal-btn-row">
               <button
-                className="close-btn"
+                className="start-button"
                 onClick={() => {
                   resetGame();
                   setShowResetConfirm(false);
+                  setGameStarted(false); // 👈 THIS LINE
                 }}
               >
-                Da
+                ZAVRŠI I OBRIŠI
               </button>
               <button
                 className="reset-btn"
                 onClick={() => setShowResetConfirm(false)}
               >
-                Ne
+                Odustani
               </button>
             </div>
           </div>

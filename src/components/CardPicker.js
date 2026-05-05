@@ -16,7 +16,7 @@ export default function CardPicker({ category, onSelect, onClose }) {
 
   return (
     <div className="modal-overlay">
-      <div className="modal">
+      <div className={`${category}-modal`}>
         {/* SEARCH */}
         <input
           className="search-input"
@@ -40,7 +40,7 @@ export default function CardPicker({ category, onSelect, onClose }) {
 
         {/* CLOSE */}
         <button className="close-btn" onClick={onClose}>
-          Zatvori
+          ZATVORI
         </button>
       </div>
     </div>
