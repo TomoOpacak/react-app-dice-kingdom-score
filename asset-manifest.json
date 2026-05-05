@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-app-dice-kingdom-score/static/css/main.172d6c02.css",
-    "main.js": "/react-app-dice-kingdom-score/static/js/main.a107fedd.js",
+    "main.css": "/react-app-dice-kingdom-score/static/css/main.8daa5146.css",
+    "main.js": "/react-app-dice-kingdom-score/static/js/main.40710726.js",
     "static/js/453.dd8c5817.chunk.js": "/react-app-dice-kingdom-score/static/js/453.dd8c5817.chunk.js",
     "static/media/dwarvenaxe-bb-w00-regular.ttf": "/react-app-dice-kingdom-score/static/media/dwarvenaxe-bb-w00-regular.e9404e7ae24fb1f73182.ttf",
     "index.html": "/react-app-dice-kingdom-score/index.html",
-    "main.172d6c02.css.map": "/react-app-dice-kingdom-score/static/css/main.172d6c02.css.map",
-    "main.a107fedd.js.map": "/react-app-dice-kingdom-score/static/js/main.a107fedd.js.map",
+    "main.8daa5146.css.map": "/react-app-dice-kingdom-score/static/css/main.8daa5146.css.map",
+    "main.40710726.js.map": "/react-app-dice-kingdom-score/static/js/main.40710726.js.map",
     "453.dd8c5817.chunk.js.map": "/react-app-dice-kingdom-score/static/js/453.dd8c5817.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.172d6c02.css",
-    "static/js/main.a107fedd.js"
+    "static/css/main.8daa5146.css",
+    "static/js/main.40710726.js"
   ]
 }
