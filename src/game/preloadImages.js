@@ -1,11 +1,17 @@
 export const preloadImages = (imageArray) => {
   return Promise.all(
     imageArray.map((src) => {
-      return new Promise((resolve, reject) => {
+      return new Promise(async (resolve) => {
         const img = new Image();
         img.src = src;
-        img.onload = resolve;
-        img.onerror = reject;
+
+        try {
+          await img.decode(); // 👈 KEY FIX (mobile important)
+        } catch (e) {
+          // fallback if decode not supported
+        }
+
+        resolve();
       });
     }),
   );
