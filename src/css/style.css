@@ -14,49 +14,6 @@
 body {
   background: linear-gradient(rgb(212, 247, 243), rgb(221, 229, 192));
 }
-.wobble-image {
-  display: inline-block;
-  width: 200px; /* or any size you want */
-  height: auto;
-
-  /* smooth scaling and wobble */
-  animation: pulseWobble 2s ease-in-out infinite;
-  transform-origin: center center;
-}
-
-/* combined pulse + wobble */
-@keyframes pulseWobble {
-  0% {
-    transform: scale(1) rotate(0deg);
-  }
-  25% {
-    transform: scale(1.05) rotate(3deg);
-  }
-  50% {
-    transform: scale(1) rotate(-3deg);
-  }
-  75% {
-    transform: scale(1.05) rotate(3deg);
-  }
-  100% {
-    transform: scale(1) rotate(0deg);
-  }
-}
-.dice-icon-left {
-  width: 60px;
-  height: auto;
-  margin-left: 2rem;
-}
-.dice-icon-right {
-  width: 60px;
-  height: auto;
-  margin-right: 2rem;
-}
-.front {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 h1 {
   font-family: "Dwarf", sans-serif;
   text-align: center;
