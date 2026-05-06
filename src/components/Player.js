@@ -21,10 +21,7 @@ export default function Player({ name }) {
     localStorage.removeItem("duke");
     localStorage.removeItem("bonusVP");
   };
-  const allImages = [
-    ...cards.map((c) => process.env.PUBLIC_URL + c.image),
-    ...dukes.map((d) => process.env.PUBLIC_URL + d.image),
-  ];
+
   const [showResetConfirm, setShowResetConfirm] = useState(false);
   const [gameStarted, setGameStarted] = useState(false);
   const [playerCards, setPlayerCards] = useState(() => {
@@ -34,13 +31,42 @@ export default function Player({ name }) {
   const [duke, setDuke] = useState(() => {
     return JSON.parse(localStorage.getItem("duke")) || null;
   });
+
   const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    preloadImages(allImages)
-      .then(() => setImagesLoaded(true))
-      .catch(() => setImagesLoaded(true)); // fail-safe
+    const allImages = [
+      ...cards.map((c) => process.env.PUBLIC_URL + c.image),
+      ...dukes.map((d) => process.env.PUBLIC_URL + d.image),
+    ];
+
+    let loaded = 0;
+    const total = allImages.length;
+
+    const loadImage = (src) =>
+      new Promise((resolve) => {
+        const img = new Image();
+        img.src = src;
+
+        img.onload = () => {
+          loaded++;
+          setProgress(Math.round((loaded / total) * 100));
+          resolve();
+        };
+
+        img.onerror = () => {
+          loaded++;
+          setProgress(Math.round((loaded / total) * 100));
+          resolve(); // fail-safe so it never blocks app
+        };
+      });
+
+    Promise.all(allImages.map(loadImage)).then(() => {
+      setImagesLoaded(true);
+    });
   }, []);
+
   useEffect(() => {
     localStorage.setItem("playerCards", JSON.stringify(playerCards));
   }, [playerCards]);
@@ -73,7 +99,19 @@ export default function Player({ name }) {
     localStorage.setItem("bonusVP", bonusVP);
   }, [bonusVP]);
   const score = calculateScore(playerCards, duke, Number(bonusVP));
+  if (!imagesLoaded) {
+    return (
+      <div className="loading-wrapper">
+        <h2>Učitavanje igre...</h2>
 
+        <div className="loading-bar">
+          <div className="loading-fill" style={{ width: `${progress}%` }} />
+        </div>
+
+        <p>{progress}%</p>
+      </div>
+    );
+  }
   const addCard = (card) => {
     const newCard = {
       ...card,
