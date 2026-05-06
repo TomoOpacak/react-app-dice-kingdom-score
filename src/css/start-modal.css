@@ -36,7 +36,6 @@
 }
 
 .start-button:active {
-  background: rgb(175, 36, 36);
   transform: scale(0.95);
 }
 p {

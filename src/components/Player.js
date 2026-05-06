@@ -5,6 +5,9 @@ import { dukes } from "../data/dukes";
 import { calculateScore } from "../game/scoring";
 import CardPicker from "./CardPicker";
 import DukePicker from "./DukePicker";
+import WakeLockButton from "./WakeLockButton";
+import { preloadImages } from "../game/preloadImages";
+
 import { t } from "../data/labels";
 import "../css/style.css";
 
@@ -18,7 +21,10 @@ export default function Player({ name }) {
     localStorage.removeItem("duke");
     localStorage.removeItem("bonusVP");
   };
-
+  const allImages = [
+    ...cards.map((c) => process.env.PUBLIC_URL + c.image),
+    ...dukes.map((d) => process.env.PUBLIC_URL + d.image),
+  ];
   const [showResetConfirm, setShowResetConfirm] = useState(false);
   const [gameStarted, setGameStarted] = useState(false);
   const [playerCards, setPlayerCards] = useState(() => {
@@ -28,7 +34,13 @@ export default function Player({ name }) {
   const [duke, setDuke] = useState(() => {
     return JSON.parse(localStorage.getItem("duke")) || null;
   });
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
+  useEffect(() => {
+    preloadImages(allImages)
+      .then(() => setImagesLoaded(true))
+      .catch(() => setImagesLoaded(true)); // fail-safe
+  }, []);
   useEffect(() => {
     localStorage.setItem("playerCards", JSON.stringify(playerCards));
   }, [playerCards]);
@@ -236,7 +248,7 @@ export default function Player({ name }) {
 
       {gameStarted && (
         <>
-          <h2>{name}</h2>
+          <WakeLockButton />
 
           <h1>Dodatni PB:</h1>
           <div className="vp-tracker">
@@ -788,7 +800,8 @@ export default function Player({ name }) {
                     .map((b, i) => (
                       <li key={i} className="score-row">
                         <span>
-                          {t(b.label)}: {b.count} × {b.multiplier} =
+                          {t(b.label)}: {b.multiplier} ×{" "}
+                          <span className="count-badge">{b.count}</span> =
                         </span>
 
                         <svg
