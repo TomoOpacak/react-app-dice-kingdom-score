@@ -363,6 +363,24 @@ export const cards = [
     value: 10,
     image: IMG + "/assets/cards/citizens/butcher.webp",
   },
+  {
+    id: "herald",
+    name: "Glasnik",
+    category: "citizen",
+    tagCounts: { worker: 1 },
+    baseVP: 0,
+    value: 11,
+    image: IMG + "/assets/cards/citizens/herald.webp",
+  },
+  {
+    id: "royal_guard",
+    name: "Kraljevski Stražar",
+    category: "citizen",
+    tagCounts: { soldier: 1 },
+    baseVP: 0,
+    value: 11,
+    image: IMG + "/assets/cards/citizens/royal_guard.webp",
+  },
   //DOMAINS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
   {
     id: "imperial_camp",
@@ -398,7 +416,7 @@ export const cards = [
   },
   {
     id: "frozen_witch_lair",
-    name: "Jazbina Mrzle Vještices",
+    name: "Jazbina Mrzle Vještice",
     category: "domain",
     tagCounts: { rogue: 2 },
     baseVP: 3,
@@ -406,7 +424,7 @@ export const cards = [
   },
   {
     id: "seven_tower_castle",
-    name: "Jazbina Mrzle Vještices",
+    name: "Dvorac Sedam Sunčanih Kula",
     category: "domain",
     tagCounts: { worker: 1, hero: 1, soldier: 1, rogue: 1 },
     baseVP: 2,
@@ -923,6 +941,22 @@ export const cards = [
     tagCounts: { soldier: 2 },
     baseVP: 2,
     image: IMG + "/assets/cards/domain/lake_camp.webp",
+  },
+  {
+    id: "unusual_workshop",
+    name: "Čudnovata Radionica",
+    category: "domain",
+    tagCounts: { worker: 1, soldier: 1, rogue: 1 },
+    baseVP: 3,
+    image: IMG + "/assets/cards/domain/unusual_workshop.webp",
+  },
+  {
+    id: "brigands_bay",
+    name: "Uvala Otimača",
+    category: "domain",
+    tagCounts: { worker: 1, rogue: 1 },
+    baseVP: 1,
+    image: IMG + "/assets/cards/domain/brigands_bay.webp",
   },
 
   // MONSTERS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

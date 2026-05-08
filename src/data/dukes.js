@@ -222,4 +222,84 @@ export const dukes = [
       },
     ],
   },
+  {
+    id: "nights_watchmen",
+    name: "Zapovjednik Noćne Straže",
+    image: IMG + "/assets/cards/dukes/nights_watchmen.webp",
+    rules: [
+      {
+        type: "count_tag",
+        tag: "soldier",
+        pointsPer: 1,
+      },
+      {
+        type: "count_category",
+        category: "domain",
+        pointsPer: 2,
+      },
+    ],
+  },
+  {
+    id: "countess",
+    name: "Grofica Izabela Pravedna",
+    image: IMG + "/assets/cards/dukes/countess.webp",
+    rules: [
+      {
+        type: "count_tag",
+        tag: "worker",
+        pointsPer: 1,
+      },
+      {
+        type: "count_category",
+        category: "domain",
+        pointsPer: 2,
+      },
+    ],
+  },
+  {
+    id: "royal_caravan_master",
+    name: "Kraljev Gospodar Karavane",
+    image: IMG + "/assets/cards/dukes/royal_caravan_master.webp",
+    rules: [
+      {
+        type: "count_category",
+        category: "citizen",
+        pointsPer: 2,
+      },
+    ],
+  },
+  {
+    id: "royal_giant_slayer",
+    name: "Kraljeva Ubojica Divova",
+    image: IMG + "/assets/cards/dukes/royal_giant_slayer.webp",
+    rules: [
+      {
+        type: "count_category",
+        category: "monster",
+        pointsPer: 1,
+      },
+      {
+        type: "count_tag",
+        tag: "titan",
+        pointsPer: 1,
+      },
+    ],
+  },
+  {
+    id: "royal_recruiter",
+    name: "Kraljev Ekspert Za Novačenje",
+    image: IMG + "/assets/cards/dukes/royal_recruiter.webp",
+    rules: [
+      {
+        type: "count_tag",
+        tag: "soldier",
+        pointsPer: 1,
+      },
+      {
+        type: "count_category",
+        category: "citizen",
+        pointsPer: 1,
+      },
+    ],
+  },
 ];
