@@ -1,10 +1,10 @@
 export const LABELS = {
   worker: "Radnik",
   soldier: "Vojnik",
-  rogue: "Odmetnik",
-  hero: "Zaštitnik",
+  rogue: "Zlikovac",
+  hero: "Junak",
   monster: "Čudovišta",
-  domain: "Posjed",
+  domain: "Posjedi",
   citizen: "Likovi",
   wild: "Divlji",
   minion: "Podanik",
