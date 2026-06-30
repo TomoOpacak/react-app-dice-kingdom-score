@@ -9,6 +9,7 @@ import WakeLockButton from "./WakeLockButton";
 import { preloadImages } from "../game/preloadImages";
 import SendResultButton from "./SendResultButton";
 import ImportGameModal from "./ImportGameModal";
+
 import { t } from "../data/labels";
 import "../css/style.css";
 

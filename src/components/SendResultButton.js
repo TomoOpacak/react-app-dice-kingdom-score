@@ -24,8 +24,12 @@ Copy this code if you want to import the game later.`;
   };
 
   return (
-    <button className="end-btn" onClick={handleSend}>
-      Pošalji rezultat
+    <button className="send-btn" onClick={handleSend}>
+      <img
+        className="send-icon"
+        src={`${process.env.PUBLIC_URL}/assets/icons/send.svg`}
+        alt="logo"
+      />
     </button>
   );
 }

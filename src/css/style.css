@@ -491,7 +491,6 @@ li {
   transform: scale(0.95);
 }
 .import-icon {
-  font-size: 80px;
   margin-bottom: 10px;
 }
 .text-import {
@@ -503,5 +502,44 @@ li {
   border: 2px solid #ccc;
   border-radius: 8px;
 }
-.import-btn {
+.send-icon {
+  width: 80px;
+  height: auto;
+}
+.send-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  animation: sendFloat 2.5s ease-in-out infinite;
+}
+.send-btn svg,
+.send-btn img {
+  animation: wobble 2.5s infinite;
+  transform-origin: center;
+}
+
+/* WOBBLE */
+@keyframes wobble {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(8deg);
+  }
+  45% {
+    transform: rotate(-6deg);
+  }
+  60% {
+    transform: rotate(4deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
