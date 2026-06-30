@@ -7,7 +7,8 @@ import CardPicker from "./CardPicker";
 import DukePicker from "./DukePicker";
 import WakeLockButton from "./WakeLockButton";
 import { preloadImages } from "../game/preloadImages";
-
+import SendResultButton from "./SendResultButton";
+import ImportGameModal from "./ImportGameModal";
 import { t } from "../data/labels";
 import "../css/style.css";
 
@@ -21,7 +22,8 @@ export default function Player({ name }) {
     localStorage.removeItem("duke");
     localStorage.removeItem("bonusVP");
   };
-
+  const [showImportModal, setShowImportModal] = useState(false);
+  const [importCode, setImportCode] = useState("");
   const [showResetConfirm, setShowResetConfirm] = useState(false);
   const [gameStarted, setGameStarted] = useState(false);
   const [playerCards, setPlayerCards] = useState(() => {
@@ -79,6 +81,35 @@ export default function Player({ name }) {
   const [showDukePicker, setShowDukePicker] = useState(false);
   const [expandedStacks, setExpandedStacks] = useState({});
   const [vpAnimation, setVpAnimation] = useState(null);
+  const handleImportGame = () => {
+    try {
+      const imported = JSON.parse(atob(importCode.trim()));
+
+      const importedCards = imported.c
+        .map((cardId) => {
+          const card = cards.find((c) => c.id === cardId);
+
+          if (!card) return null;
+
+          return {
+            ...card,
+            instanceId: crypto.randomUUID(),
+          };
+        })
+        .filter(Boolean);
+
+      const importedDuke = dukes.find((d) => d.id === imported.d) || null;
+
+      setPlayerCards(importedCards);
+      setDuke(importedDuke);
+      setBonusVP(imported.b || 0);
+
+      alert("Igra učitana!");
+    } catch (err) {
+      alert("Neispravan kod igre!");
+      console.error(err);
+    }
+  };
   useEffect(() => {
     if (vpAnimation) {
       const timeout = setTimeout(() => setVpAnimation(null), 300);
@@ -256,7 +287,8 @@ export default function Player({ name }) {
       </div>
     );
   };
-
+  const result = calculateScore(playerCards, duke, bonusVP);
+  console.log("showImportModal =", showImportModal);
   return (
     <div className="player-container">
       {!gameStarted && (
@@ -276,6 +308,7 @@ export default function Player({ name }) {
             >
               POKRENI IGRU
             </button>
+
             <p className="greet-messagge">
               Koristite čaroliju, zlato i moć za svladavanje čudovišta i
               osvajanje posjeda. Okušajte sreću u bacanju kockica.
@@ -946,6 +979,12 @@ export default function Player({ name }) {
                 >
                   ZATVORI
                 </button>
+                <SendResultButton
+                  playerCards={playerCards}
+                  duke={duke}
+                  bonusVP={bonusVP}
+                  result={result}
+                />
               </div>
             </div>
           )}
@@ -958,6 +997,18 @@ export default function Player({ name }) {
               onClick={() => setShowResetConfirm(true)}
             >
               Završi Igru
+            </button>
+            <button
+              className="load-btn"
+              onClick={() => {
+                setShowImportModal(true);
+              }}
+            >
+              <img
+                className="import-icon"
+                src={`${process.env.PUBLIC_URL}/assets/icons/import.svg`}
+                alt="logo"
+              />
             </button>
           </div>
           {picker && (
@@ -976,6 +1027,14 @@ export default function Player({ name }) {
                 setShowDukePicker(false);
               }}
               onClose={() => setShowDukePicker(false)}
+            />
+          )}
+          {showImportModal && (
+            <ImportGameModal
+              importCode={importCode}
+              setImportCode={setImportCode}
+              onLoad={handleImportGame}
+              onClose={() => setShowImportModal(false)}
             />
           )}
         </>

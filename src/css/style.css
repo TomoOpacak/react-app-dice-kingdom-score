@@ -470,3 +470,38 @@ li {
   background: #6a026c;
   transition: width 0.2s ease;
 }
+.import-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f3e6ff;
+  width: 95%;
+  max-width: 400px;
+  padding: 12px;
+  border-radius: 10px;
+}
+.load-btn {
+  align-self: center;
+  background: none;
+  border: none;
+  width: 50px;
+  height: auto;
+}
+.load-btn:active {
+  transform: scale(0.95);
+}
+.import-icon {
+  font-size: 80px;
+  margin-bottom: 10px;
+}
+.text-import {
+  width: 100%;
+  padding: 8px;
+  margin: 20px;
+  font-family: "Dwarf", sans-serif;
+  font-size: 32px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+.import-btn {
+}
