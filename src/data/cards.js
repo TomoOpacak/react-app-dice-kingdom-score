@@ -388,6 +388,7 @@ export const cards = [
     category: "domain",
     tagCounts: { soldier: 1, hero: 1 },
     baseVP: 2,
+    value: 8,
     image: IMG + "/assets/cards/domain/imperial_camp.webp",
   },
   {
@@ -396,6 +397,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 2 },
     baseVP: 2,
+    value: 5,
     image: IMG + "/assets/cards/domain/beyond_the_wall.webp",
   },
   {
@@ -404,6 +406,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, hero: 1, soldier: 1 },
     baseVP: 2,
+    value: 11,
     image: IMG + "/assets/cards/domain/dragonstone.webp",
   },
   {
@@ -412,6 +415,7 @@ export const cards = [
     category: "domain",
     tagCounts: { hero: 1, soldier: 2 },
     baseVP: 3,
+    value: 8,
     image: IMG + "/assets/cards/domain/flaming_spring.webp",
   },
   {
@@ -420,6 +424,7 @@ export const cards = [
     category: "domain",
     tagCounts: { rogue: 2 },
     baseVP: 3,
+    value: 5,
     image: IMG + "/assets/cards/domain/frozen_witch_lair.webp",
   },
   {
@@ -428,6 +433,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, hero: 1, soldier: 1, rogue: 1 },
     baseVP: 2,
+    value: 12,
     image: IMG + "/assets/cards/domain/seven_tower_castle.webp",
   },
   {
@@ -436,6 +442,7 @@ export const cards = [
     category: "domain",
     tagCounts: { soldier: 3, hero: 1 },
     baseVP: 3,
+    value: 12,
     image: IMG + "/assets/cards/domain/flying_city.webp",
   },
   {
@@ -444,6 +451,7 @@ export const cards = [
     category: "domain",
     tagCounts: { soldier: 1, rogue: 2 },
     baseVP: 2,
+    value: 8,
     image: IMG + "/assets/cards/domain/wandering_flame.webp",
   },
   {
@@ -452,6 +460,7 @@ export const cards = [
     category: "domain",
     tagCounts: { rogue: 1, hero: 1 },
     baseVP: 3,
+    value: 10,
     image: IMG + "/assets/cards/domain/winter_tower.webp",
   },
   {
@@ -460,6 +469,7 @@ export const cards = [
     category: "domain",
     tagCounts: { soldier: 1, hero: 1 },
     baseVP: 3,
+    value: 7,
     image: IMG + "/assets/cards/domain/purple_thorne.webp",
   },
   {
@@ -468,6 +478,7 @@ export const cards = [
     category: "domain",
     tagCounts: { soldier: 2 },
     baseVP: 3,
+    value: 6,
     image: IMG + "/assets/cards/domain/water_watch.webp",
   },
   {
@@ -476,6 +487,7 @@ export const cards = [
     category: "domain",
     tagCounts: { rogue: 1, hero: 1 },
     baseVP: 1,
+    value: 5,
     image: IMG + "/assets/cards/domain/traitor_harbor.webp",
   },
   {
@@ -484,6 +496,7 @@ export const cards = [
     category: "domain",
     tagCounts: { rogue: 1, hero: 1 },
     baseVP: 1,
+    value: 6,
     image: IMG + "/assets/cards/domain/fogy_swamp.webp",
   },
   {
@@ -492,6 +505,7 @@ export const cards = [
     category: "domain",
     tagCounts: { soldier: 3 },
     baseVP: 2,
+    value: 5,
     image: IMG + "/assets/cards/domain/ally_army.webp",
   },
   {
@@ -500,6 +514,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 2, rogue: 1 },
     baseVP: 2,
+    value: 9,
     image: IMG + "/assets/cards/domain/zafara_oasis.webp",
   },
   {
@@ -508,6 +523,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, hero: 1 },
     baseVP: 3,
+    value: 7,
     image: IMG + "/assets/cards/domain/eternal_winter_land.webp",
   },
   {
@@ -516,6 +532,7 @@ export const cards = [
     category: "domain",
     tagCounts: { soldier: 1, hero: 1 },
     baseVP: 4,
+    value: 9,
     image: IMG + "/assets/cards/domain/frozen_valey.webp",
   },
   {
@@ -524,6 +541,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, soldier: 1, rogue: 1 },
     baseVP: 3,
+    value: 13,
     image: IMG + "/assets/cards/domain/jousting_field.webp",
   },
   {
@@ -532,6 +550,7 @@ export const cards = [
     category: "domain",
     tagCounts: { soldier: 1, hero: 1 },
     baseVP: 1,
+    value: 8,
     image: IMG + "/assets/cards/domain/all_seeing_eye.webp",
   },
   {
@@ -540,6 +559,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, rogue: 1 },
     baseVP: 3,
+    value: 12,
     image: IMG + "/assets/cards/domain/arabian_port.webp",
   },
   {
@@ -548,6 +568,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, soldier: 1, rogue: 1 },
     baseVP: 2,
+    value: 7,
     image: IMG + "/assets/cards/domain/orc_pass.webp",
   },
   {
@@ -556,6 +577,7 @@ export const cards = [
     category: "domain",
     tagCounts: { hero: 2 },
     baseVP: 2,
+    value: 8,
     image: IMG + "/assets/cards/domain/cathedral.webp",
   },
   {
@@ -564,6 +586,7 @@ export const cards = [
     category: "domain",
     tagCounts: { rogue: 1, hero: 1 },
     baseVP: 2,
+    value: 9,
     image: IMG + "/assets/cards/domain/obsidian_tower.webp",
   },
   {
@@ -572,6 +595,7 @@ export const cards = [
     category: "domain",
     tagCounts: { soldier: 1, rogue: 1, worker: 1 },
     baseVP: 2,
+    value: 6,
     image: IMG + "/assets/cards/domain/dark_tide_harbour.webp",
   },
   {
@@ -580,6 +604,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 3, rogue: 1 },
     baseVP: 1,
+    value: 8,
     image: IMG + "/assets/cards/domain/treasure_bay.webp",
   },
   {
@@ -588,6 +613,7 @@ export const cards = [
     category: "domain",
     tagCounts: { hero: 1, rogue: 1 },
     baseVP: 3,
+    value: 9,
     image: IMG + "/assets/cards/domain/house_of_undaying.webp",
   },
   {
@@ -596,6 +622,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, hero: 1, rogue: 1 },
     baseVP: 2,
+    value: 10,
     image: IMG + "/assets/cards/domain/cursed_cave.webp",
   },
   {
@@ -604,6 +631,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, hero: 1, soldier: 1 },
     baseVP: 5,
+    value: 12,
     image: IMG + "/assets/cards/domain/emerald_fortress.webp",
   },
   {
@@ -612,6 +640,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 2, hero: 1 },
     baseVP: 4,
+    value: 14,
     image: IMG + "/assets/cards/domain/stone_temple.webp",
   },
   {
@@ -620,6 +649,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, rogue: 1 },
     baseVP: 3,
+    value: 7,
     image: IMG + "/assets/cards/domain/rogue_landing.webp",
   },
   {
@@ -628,6 +658,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, hero: 1 },
     baseVP: 3,
+    value: 8,
     image: IMG + "/assets/cards/domain/sky_village.webp",
   },
   {
@@ -636,6 +667,7 @@ export const cards = [
     category: "domain",
     tagCounts: { rogue: 2 },
     baseVP: 2,
+    value: 10,
     image: IMG + "/assets/cards/domain/blackwater_bay.webp",
   },
   {
@@ -644,6 +676,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, soldier: 1 },
     baseVP: 5,
+    value: 14,
     image: IMG + "/assets/cards/domain/mines_of_moria.webp",
   },
   {
@@ -652,6 +685,7 @@ export const cards = [
     category: "domain",
     tagCounts: { soldier: 1, rogue: 1 },
     baseVP: 3,
+    value: 9,
     image: IMG + "/assets/cards/domain/palisade.webp",
   },
   {
@@ -660,6 +694,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, soldier: 2 },
     baseVP: 4,
+    value: 11,
     image: IMG + "/assets/cards/domain/kings_landing.webp",
   },
   {
@@ -668,6 +703,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, rogue: 1 },
     baseVP: 3,
+    value: 9,
     image: IMG + "/assets/cards/domain/forgotten_spring.webp",
   },
   {
@@ -676,6 +712,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 2, rogue: 1 },
     baseVP: 4,
+    value: 10,
     image: IMG + "/assets/cards/domain/blackwater_fortress.webp",
   },
   {
@@ -684,6 +721,7 @@ export const cards = [
     category: "domain",
     tagCounts: { soldier: 4 },
     baseVP: 3,
+    value: 12,
     image: IMG + "/assets/cards/domain/winterfell.webp",
   },
   {
@@ -692,6 +730,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, soldier: 1, hero: 2 },
     baseVP: 3,
+    value: 12,
     image: IMG + "/assets/cards/domain/twilight_palace.webp",
   },
   {
@@ -700,6 +739,7 @@ export const cards = [
     category: "domain",
     tagCounts: { soldier: 2 },
     baseVP: 2,
+    value: 6,
     image: IMG + "/assets/cards/domain/great_wall.webp",
   },
   {
@@ -708,6 +748,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 2 },
     baseVP: 3,
+    value: 6,
     image: IMG + "/assets/cards/domain/good_witch_hut.webp",
   },
   {
@@ -716,6 +757,7 @@ export const cards = [
     category: "domain",
     tagCounts: { soldier: 1, rogue: 2 },
     baseVP: 1,
+    value: 7,
     image: IMG + "/assets/cards/domain/cript.webp",
   },
   {
@@ -724,6 +766,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, soldier: 1, rogue: 1, hero: 1 },
     baseVP: 2,
+    value: 10,
     image: IMG + "/assets/cards/domain/tower.webp",
   },
   {
@@ -732,6 +775,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 2, rogue: 1 },
     baseVP: 3,
+    value: 13,
     image: IMG + "/assets/cards/domain/haunted_hut.webp",
   },
   {
@@ -740,6 +784,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, hero: 1 },
     baseVP: 3,
+    value: 6,
     image: IMG + "/assets/cards/domain/gold_obelisk.webp",
   },
   {
@@ -748,6 +793,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, soldier: 1, hero: 1 },
     baseVP: 3,
+    value: 12,
     image: IMG + "/assets/cards/domain/circus.webp",
   },
   {
@@ -756,6 +802,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 3 },
     baseVP: 2,
+    value: 9,
     image: IMG + "/assets/cards/domain/market.webp",
   },
   {
@@ -764,6 +811,7 @@ export const cards = [
     category: "domain",
     tagCounts: { soldier: 1, rogue: 1 },
     baseVP: 3,
+    value: 9,
     image: IMG + "/assets/cards/domain/lost_garden.webp",
   },
   {
@@ -772,6 +820,7 @@ export const cards = [
     category: "domain",
     tagCounts: { soldier: 2, rogue: 1 },
     baseVP: 5,
+    value: 14,
     image: IMG + "/assets/cards/domain/colosseum.webp",
   },
   {
@@ -780,6 +829,7 @@ export const cards = [
     category: "domain",
     tagCounts: { rogue: 2 },
     baseVP: 2,
+    value: 11,
     image: IMG + "/assets/cards/domain/laboratory.webp",
   },
   {
@@ -788,6 +838,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, soldier: 1, hero: 1 },
     baseVP: 3,
+    value: 8,
     image: IMG + "/assets/cards/domain/dracula_castle.webp",
   },
   {
@@ -796,6 +847,7 @@ export const cards = [
     category: "domain",
     tagCounts: { soldier: 2 },
     baseVP: 3,
+    value: 11,
     image: IMG + "/assets/cards/domain/lucky_bridge.webp",
   },
   {
@@ -804,6 +856,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, rogue: 1 },
     baseVP: 1,
+    value: 7,
     image: IMG + "/assets/cards/domain/blue_harbour.webp",
   },
   {
@@ -812,6 +865,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 2, hero: 1 },
     baseVP: 3,
+    value: 12,
     image: IMG + "/assets/cards/domain/kings_tower.webp",
   },
   {
@@ -820,6 +874,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, rogue: 2 },
     baseVP: 5,
+    value: 14,
     image: IMG + "/assets/cards/domain/blood_moon_palace.webp",
   },
   {
@@ -828,6 +883,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, soldier: 1, hero: 2 },
     baseVP: 3,
+    value: 13,
     image: IMG + "/assets/cards/domain/new_acropolis.webp",
   },
   {
@@ -836,6 +892,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, soldier: 1, rogue: 1, hero: 1 },
     baseVP: 2,
+    value: 8,
     image: IMG + "/assets/cards/domain/sept_of_baelor.webp",
   },
   {
@@ -844,6 +901,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, soldier: 1 },
     baseVP: 3,
+    value: 9,
     image: IMG + "/assets/cards/domain/monolith.webp",
   },
   {
@@ -852,6 +910,7 @@ export const cards = [
     category: "domain",
     tagCounts: { soldier: 2 },
     baseVP: 2,
+    value: 7,
     image: IMG + "/assets/cards/domain/dragon_embrace.webp",
   },
   {
@@ -860,6 +919,7 @@ export const cards = [
     category: "domain",
     tagCounts: { hero: 2 },
     baseVP: 3,
+    value: 10,
     image: IMG + "/assets/cards/domain/highgarden.webp",
   },
   {
@@ -868,6 +928,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 2, rogue: 1 },
     baseVP: 3,
+    value: 6,
     image: IMG + "/assets/cards/domain/vinkograd.webp",
   },
   {
@@ -876,6 +937,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 3 },
     baseVP: 2,
+    value: 6,
     image: IMG + "/assets/cards/domain/hobitton.webp",
   },
   {
@@ -884,6 +946,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, soldier: 1, hero: 1 },
     baseVP: 3,
+    value: 7,
     image: IMG + "/assets/cards/domain/tyr_tomb.webp",
   },
   {
@@ -892,6 +955,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, soldier: 1, hero: 1 },
     baseVP: 4,
+    value: 13,
     image: IMG + "/assets/cards/domain/sun_valey.webp",
   },
   {
@@ -900,6 +964,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, soldier: 2 },
     baseVP: 3,
+    value: 13,
     image: IMG + "/assets/cards/domain/castle_nathria.webp",
   },
   {
@@ -908,6 +973,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, soldier: 2 },
     baseVP: 3,
+    value: 8,
     image: IMG + "/assets/cards/domain/ravens_watch.webp",
   },
   {
@@ -916,6 +982,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 2, hero: 1 },
     baseVP: 3,
+    value: 11,
     image: IMG + "/assets/cards/domain/feudal_playground.webp",
   },
   {
@@ -924,6 +991,7 @@ export const cards = [
     category: "domain",
     tagCounts: { soldier: 2 },
     baseVP: 2,
+    value: 6,
     image: IMG + "/assets/cards/domain/dead_fortress.webp",
   },
   {
@@ -932,6 +1000,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, hero: 1 },
     baseVP: 2,
+    value: 6,
     image: IMG + "/assets/cards/domain/northern_forrest.webp",
   },
   {
@@ -940,6 +1009,7 @@ export const cards = [
     category: "domain",
     tagCounts: { soldier: 2 },
     baseVP: 2,
+    value: 8,
     image: IMG + "/assets/cards/domain/lake_camp.webp",
   },
   {
@@ -948,6 +1018,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, soldier: 1, rogue: 1 },
     baseVP: 3,
+    value: 6,
     image: IMG + "/assets/cards/domain/unusual_workshop.webp",
   },
   {
@@ -956,6 +1027,7 @@ export const cards = [
     category: "domain",
     tagCounts: { worker: 1, rogue: 1 },
     baseVP: 1,
+    value: 5,
     image: IMG + "/assets/cards/domain/brigands_bay.webp",
   },
 
