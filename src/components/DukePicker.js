@@ -72,12 +72,12 @@ export default function DukePicker({ dukes, onSelect, onClose }) {
   return (
     <div className="modal-overlay">
       <div className="duke-modal">
-        <input
+        {/* <input
           className="search-input"
           placeholder="Pretraži plemića..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-        />
+        /> */}
 
         {/* ICON FILTERS */}
         <div className="duke-icon-filter">

@@ -79,14 +79,6 @@ export default function DomainPicker({ onSelect, onClose }) {
   return (
     <div className="modal-overlay">
       <div className="domain-modal">
-        {/* SEARCH */}
-        {/* <input
-          className="search-input"
-          placeholder="Pretraži posjede..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        /> */}
-
         {/* TAG FILTERS */}
         <div className="domain-icon-filter">
           {availableTags.map((tag) => (
@@ -124,29 +116,37 @@ export default function DomainPicker({ onSelect, onClose }) {
             </svg>
           </button>
         </div>
-        {/* GOLD FILTER */}
-        <div className="domain-gold-filter">
-          <select
-            className={`gold-select ${selectedGold !== null ? "active" : ""}`}
-            value={selectedGold ?? ""}
-            onChange={(e) =>
-              setSelectedGold(
-                e.target.value === "" ? null : Number(e.target.value),
-              )
-            }
-          >
-            <option value="" disabled hidden>
-              0
-            </option>
-
-            {GOLD_VALUES.map((v) => (
-              <option key={v} value={v}>
-                {getGoldLabel(v)}
+        <div className="domain-resource-filter">
+          {/* GOLD FILTER */}
+          <div className="domain-gold-filter">
+            <select
+              className={`gold-select ${selectedGold !== null ? "active" : ""}`}
+              value={selectedGold ?? ""}
+              onChange={(e) =>
+                setSelectedGold(
+                  e.target.value === "" ? null : Number(e.target.value),
+                )
+              }
+            >
+              <option value="" disabled hidden>
+                0
               </option>
-            ))}
-          </select>
-        </div>
 
+              {GOLD_VALUES.map((v) => (
+                <option key={v} value={v}>
+                  {getGoldLabel(v)}
+                </option>
+              ))}
+            </select>
+          </div>
+          {/* SEARCH */}
+          <input
+            className="search-input"
+            placeholder="Pretraži..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
         {/* CARDS */}
         <div className="card-list">
           {filteredCards.map((card) => (

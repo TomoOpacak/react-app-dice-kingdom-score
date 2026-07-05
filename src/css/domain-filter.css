@@ -67,3 +67,12 @@
   transform: scale(1.1);
   opacity: 1;
 }
+.domain-resource-filter {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 6px;
+  gap: 4px;
+  input {
+    width: 250px;
+  }
+}

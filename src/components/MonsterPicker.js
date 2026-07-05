@@ -10,8 +10,8 @@ const MONSTER_ICONS = {
 };
 const MONSTER_TYPE_ORDER = ["minion", "wild", "titan", "warden", "boss"];
 
-const STRENGTH_VALUES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-const MAGIC_VALUES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+const STRENGTH_VALUES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+const MAGIC_VALUES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
 export default function MonsterPicker({ onSelect, onClose }) {
   const [search, setSearch] = useState("");
@@ -61,12 +61,16 @@ export default function MonsterPicker({ onSelect, onClose }) {
     const matchesStrength =
       selectedStrength === null
         ? true
-        : selectedStrength === 12
-          ? card.strength >= 12
+        : selectedStrength === 13
+          ? card.strength >= 13
           : card.strength === selectedStrength;
 
     const matchesMagic =
-      selectedMagic === null ? true : (card.magic ?? 0) === selectedMagic;
+      selectedMagic === null
+        ? true
+        : selectedMagic === 11
+          ? card.magic >= 11
+          : card.magic === selectedMagic;
 
     return matchesSearch && matchesTypes && matchesStrength && matchesMagic;
   });
@@ -74,14 +78,6 @@ export default function MonsterPicker({ onSelect, onClose }) {
   return (
     <div className="modal-overlay">
       <div className="monster-modal">
-        {/* SEARCH */}
-        {/* <input
-          className="search-input"
-          placeholder="Pretraži čudovište..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        /> */}
-
         {/* TYPE FILTER */}
         <div className="monster-type-filter">
           {MONSTER_TYPE_ORDER.map((type) => (
@@ -133,7 +129,7 @@ export default function MonsterPicker({ onSelect, onClose }) {
               <option value="">0</option>
               {STRENGTH_VALUES.map((v) => (
                 <option key={v} value={v}>
-                  {v === 12 ? "12+" : v}
+                  {v === 13 ? "13+" : v}
                 </option>
               ))}
             </select>
@@ -155,11 +151,18 @@ export default function MonsterPicker({ onSelect, onClose }) {
               <option value="">0</option>
               {MAGIC_VALUES.map((v) => (
                 <option key={v} value={v}>
-                  {v}
+                  {v === 11 ? "11+" : v}
                 </option>
               ))}
             </select>
           </div>
+          {/* SEARCH */}
+          <input
+            className="search-input"
+            placeholder="Pretraži..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
         </div>
         {/* CARDS */}
         <div className="card-list">

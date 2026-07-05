@@ -1039,7 +1039,7 @@ export const cards = [
     tagCounts: { minion: 1 },
     baseVP: 1,
     value: 1,
-    strength: 2,
+    strength: 1,
     image: IMG + "/assets/cards/monsters/barrens_1.webp",
   },
   {
@@ -1049,7 +1049,8 @@ export const cards = [
     tagCounts: { titan: 1 },
     baseVP: 3,
     value: 1,
-    strength: 3,
+    strength: 4,
+    magic: 3,
     image: IMG + "/assets/cards/monsters/barrens_2.webp",
   },
   {
@@ -1059,7 +1060,8 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 1,
     value: 1,
-    strength: 5,
+    strength: 8,
+
     image: IMG + "/assets/cards/monsters/barrens_3.webp",
   },
   {
@@ -1069,7 +1071,8 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 5,
     value: 1,
-    strength: 7,
+    strength: 5,
+    magic: 4,
     image: IMG + "/assets/cards/monsters/barrens_4.webp",
   },
   {
@@ -1079,6 +1082,9 @@ export const cards = [
     tagCounts: { minion: 1 },
     baseVP: 3,
     value: 2,
+    magic: 1,
+    strength: 5,
+
     image: IMG + "/assets/cards/monsters/caverns_1.webp",
   },
   {
@@ -1088,6 +1094,8 @@ export const cards = [
     tagCounts: { titan: 1 },
     baseVP: 4,
     value: 2,
+    magic: 3,
+    strength: 7,
     image: IMG + "/assets/cards/monsters/caverns_2.webp",
   },
   {
@@ -1097,6 +1105,8 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 4,
     value: 2,
+    magic: 6,
+    strength: 6,
     image: IMG + "/assets/cards/monsters/caverns_3.webp",
   },
   {
@@ -1106,6 +1116,8 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 7,
     value: 2,
+    magic: 6,
+    strength: 12,
     image: IMG + "/assets/cards/monsters/caverns_4.webp",
   },
   {
@@ -1115,6 +1127,7 @@ export const cards = [
     tagCounts: { minion: 1 },
     baseVP: 3,
     value: 3,
+    strength: 5,
     image: IMG + "/assets/cards/monsters/crypt_1.webp",
   },
   {
@@ -1124,6 +1137,7 @@ export const cards = [
     tagCounts: { titan: 1 },
     baseVP: 3,
     value: 3,
+    strength: 8,
     image: IMG + "/assets/cards/monsters/crypt_2.webp",
   },
   {
@@ -1133,6 +1147,8 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 5,
     value: 3,
+    magic: 2,
+    strength: 12,
     image: IMG + "/assets/cards/monsters/crypt_3.webp",
   },
   {
@@ -1142,6 +1158,8 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 7,
     value: 3,
+    magic: 4,
+    strength: 16,
     image: IMG + "/assets/cards/monsters/crypt_4.webp",
   },
   {
@@ -1151,6 +1169,8 @@ export const cards = [
     tagCounts: { titan: 1 },
     baseVP: 1,
     value: 4,
+    magic: 1,
+    strength: 2,
     image: IMG + "/assets/cards/monsters/cutthroats_1.webp",
   },
   {
@@ -1160,6 +1180,8 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 4,
     value: 4,
+    magic: 2,
+    strength: 7,
     image: IMG + "/assets/cards/monsters/cutthroats_3.webp",
   },
   {
@@ -1169,6 +1191,8 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 6,
     value: 4,
+    magic: 8,
+    strength: 10,
     image: IMG + "/assets/cards/monsters/cutthroats_4.webp",
   },
   {
@@ -1178,6 +1202,7 @@ export const cards = [
     tagCounts: { minion: 1 },
     baseVP: 1,
     value: 5,
+    strength: 3,
     image: IMG + "/assets/cards/monsters/dark_waters_1.webp",
   },
   {
@@ -1187,6 +1212,7 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 6,
     value: 5,
+    strength: 10,
     image: IMG + "/assets/cards/monsters/dark_waters_3.webp",
   },
   {
@@ -1196,6 +1222,8 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 6,
     value: 5,
+    magic: 2,
+    strength: 15,
     image: IMG + "/assets/cards/monsters/dark_waters_4.webp",
   },
 
@@ -1206,6 +1234,8 @@ export const cards = [
     tagCounts: { wild: 1 },
     baseVP: 1,
     value: 6,
+    magic: 1,
+    strength: 1,
     image: IMG + "/assets/cards/monsters/deep_1.webp",
   },
   {
@@ -1215,6 +1245,8 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 5,
     value: 6,
+    magic: 10,
+    strength: 2,
     image: IMG + "/assets/cards/monsters/deep_3.webp",
   },
   {
@@ -1224,6 +1256,8 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 6,
     value: 6,
+    magic: 3,
+    strength: 16,
     image: IMG + "/assets/cards/monsters/deep_4.webp",
   },
 
@@ -1234,6 +1268,7 @@ export const cards = [
     tagCounts: { wild: 1 },
     baseVP: 1,
     value: 7,
+    strength: 4,
     image: IMG + "/assets/cards/monsters/den_1.webp",
   },
   {
@@ -1243,6 +1278,8 @@ export const cards = [
     tagCounts: { titan: 1 },
     baseVP: 3,
     value: 7,
+    magic: 1,
+    strength: 7,
     image: IMG + "/assets/cards/monsters/den_2.webp",
   },
   {
@@ -1252,6 +1289,8 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 3,
     value: 7,
+    magic: 7,
+    strength: 2,
     image: IMG + "/assets/cards/monsters/den_3.webp",
   },
   {
@@ -1261,6 +1300,8 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 7,
     value: 7,
+    magic: 4,
+    strength: 12,
     image: IMG + "/assets/cards/monsters/den_4.webp",
   },
 
@@ -1271,6 +1312,8 @@ export const cards = [
     tagCounts: { minion: 1 },
     baseVP: 2,
     value: 8,
+    magic: 2,
+    strength: 2,
     image: IMG + "/assets/cards/monsters/desert_1.webp",
   },
   {
@@ -1280,6 +1323,7 @@ export const cards = [
     tagCounts: { wild: 1 },
     baseVP: 3,
     value: 8,
+    strength: 7,
     image: IMG + "/assets/cards/monsters/desert_2.webp",
   },
   {
@@ -1289,6 +1333,8 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 3,
     value: 8,
+    magic: 6,
+    strength: 2,
     image: IMG + "/assets/cards/monsters/desert_3.webp",
   },
   {
@@ -1298,6 +1344,8 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 6,
     value: 8,
+    magic: 3,
+    strength: 15,
     image: IMG + "/assets/cards/monsters/desert_4.webp",
   },
 
@@ -1308,6 +1356,7 @@ export const cards = [
     tagCounts: { minion: 1 },
     baseVP: 1,
     value: 9,
+    strength: 3,
     image: IMG + "/assets/cards/monsters/forrest_1.webp",
   },
   {
@@ -1317,6 +1366,7 @@ export const cards = [
     tagCounts: { wild: 1 },
     baseVP: 2,
     value: 9,
+    strength: 6,
     image: IMG + "/assets/cards/monsters/forrest_2.webp",
   },
   {
@@ -1326,6 +1376,8 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 2,
     value: 9,
+    magic: 5,
+    strength: 3,
     image: IMG + "/assets/cards/monsters/forrest_3.webp",
   },
   {
@@ -1335,6 +1387,8 @@ export const cards = [
     tagCounts: { titan: 1 },
     baseVP: 5,
     value: 9,
+    magic: 3,
+    strength: 10,
     image: IMG + "/assets/cards/monsters/forrest_4.webp",
   },
   {
@@ -1344,6 +1398,8 @@ export const cards = [
     tagCounts: { wild: 1 },
     baseVP: 3,
     value: 10,
+    magic: 1,
+    strength: 6,
     image: IMG + "/assets/cards/monsters/glacier_1.webp",
   },
   {
@@ -1353,6 +1409,8 @@ export const cards = [
     tagCounts: { titan: 1 },
     baseVP: 3,
     value: 10,
+    magic: 2,
+    strength: 10,
     image: IMG + "/assets/cards/monsters/glacier_2.webp",
   },
   {
@@ -1362,6 +1420,8 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 5,
     value: 10,
+    magic: 6,
+    strength: 8,
     image: IMG + "/assets/cards/monsters/glacier_3.webp",
   },
   {
@@ -1371,6 +1431,8 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 5,
     value: 10,
+    magic: 12,
+    strength: 12,
     image: IMG + "/assets/cards/monsters/glacier_4.webp",
   },
 
@@ -1381,6 +1443,8 @@ export const cards = [
     tagCounts: { wild: 1 },
     baseVP: 2,
     value: 11,
+    magic: 2,
+    strength: 1,
     image: IMG + "/assets/cards/monsters/gloom_gyre_1.webp",
   },
   {
@@ -1390,6 +1454,8 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 4,
     value: 11,
+    magic: 9,
+    strength: 3,
     image: IMG + "/assets/cards/monsters/gloom_gyre_3.webp",
   },
   {
@@ -1399,6 +1465,8 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 7,
     value: 11,
+    magic: 14,
+    strength: 14,
     image: IMG + "/assets/cards/monsters/gloom_gyre_4.webp",
   },
 
@@ -1409,6 +1477,7 @@ export const cards = [
     tagCounts: { wild: 1 },
     baseVP: 3,
     value: 12,
+    strength: 7,
     image: IMG + "/assets/cards/monsters/gnolls_1.webp",
   },
   {
@@ -1418,6 +1487,7 @@ export const cards = [
     tagCounts: { wild: 1 },
     baseVP: 3,
     value: 12,
+    strength: 9,
     image: IMG + "/assets/cards/monsters/gnolls_2.webp",
   },
   {
@@ -1427,6 +1497,8 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 2,
     value: 12,
+    magic: 2,
+    strength: 3,
     image: IMG + "/assets/cards/monsters/gnolls_3.webp",
   },
   {
@@ -1436,6 +1508,8 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 4,
     value: 12,
+    magic: 1,
+    strength: 9,
     image: IMG + "/assets/cards/monsters/gnolls_4.webp",
   },
 
@@ -1446,6 +1520,7 @@ export const cards = [
     tagCounts: { minion: 1 },
     baseVP: 1,
     value: 13,
+    strength: 1,
     image: IMG + "/assets/cards/monsters/hills_1.webp",
   },
   {
@@ -1455,6 +1530,7 @@ export const cards = [
     tagCounts: { titan: 1 },
     baseVP: 2,
     value: 13,
+    strength: 3,
     image: IMG + "/assets/cards/monsters/hills_2.webp",
   },
   {
@@ -1464,6 +1540,7 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 3,
     value: 13,
+    strength: 5,
     image: IMG + "/assets/cards/monsters/hills_3.webp",
   },
   {
@@ -1473,6 +1550,7 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 4,
     value: 13,
+    strength: 6,
     image: IMG + "/assets/cards/monsters/hills_4.webp",
   },
 
@@ -1483,6 +1561,7 @@ export const cards = [
     tagCounts: { wild: 1 },
     baseVP: 3,
     value: 14,
+    strength: 5,
     image: IMG + "/assets/cards/monsters/mountains_1.webp",
   },
   {
@@ -1492,6 +1571,7 @@ export const cards = [
     tagCounts: { minion: 1 },
     baseVP: 3,
     value: 14,
+    strength: 9,
     image: IMG + "/assets/cards/monsters/mountains_2.webp",
   },
   {
@@ -1501,6 +1581,7 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 5,
     value: 14,
+    strength: 12,
     image: IMG + "/assets/cards/monsters/mountains_3.webp",
   },
   {
@@ -1510,6 +1591,7 @@ export const cards = [
     tagCounts: { titan: 1 },
     baseVP: 6,
     value: 14,
+    strength: 14,
     image: IMG + "/assets/cards/monsters/mountains_4.webp",
   },
   {
@@ -1519,6 +1601,7 @@ export const cards = [
     tagCounts: { minion: 1 },
     baseVP: 2,
     value: 15,
+    strength: 2,
     image: IMG + "/assets/cards/monsters/necropolis_1.webp",
   },
   {
@@ -1528,6 +1611,7 @@ export const cards = [
     tagCounts: { wild: 1 },
     baseVP: 3,
     value: 15,
+    strength: 5,
     image: IMG + "/assets/cards/monsters/necropolis_2.webp",
   },
   {
@@ -1537,6 +1621,7 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 4,
     value: 15,
+    strength: 7,
     image: IMG + "/assets/cards/monsters/necropolis_3.webp",
   },
   {
@@ -1546,6 +1631,7 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 5,
     value: 15,
+    strength: 10,
     image: IMG + "/assets/cards/monsters/necropolis_4.webp",
   },
 
@@ -1556,6 +1642,7 @@ export const cards = [
     tagCounts: { minion: 1 },
     baseVP: 3,
     value: 16,
+    strength: 4,
     image: IMG + "/assets/cards/monsters/oasis_1.webp",
   },
   {
@@ -1565,6 +1652,8 @@ export const cards = [
     tagCounts: { titan: 1 },
     baseVP: 4,
     value: 16,
+    magic: 3,
+    strength: 9,
     image: IMG + "/assets/cards/monsters/oasis_2.webp",
   },
   {
@@ -1574,6 +1663,8 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 3,
     value: 16,
+    magic: 10,
+    strength: 1,
     image: IMG + "/assets/cards/monsters/oasis_3.webp",
   },
   {
@@ -1583,6 +1674,8 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 7,
     value: 16,
+    magic: 10,
+    strength: 10,
     image: IMG + "/assets/cards/monsters/oasis_4.webp",
   },
 
@@ -1593,6 +1686,7 @@ export const cards = [
     tagCounts: { minion: 1 },
     baseVP: 2,
     value: 17,
+    strength: 2,
     image: IMG + "/assets/cards/monsters/ruins_1.webp",
   },
   {
@@ -1602,6 +1696,7 @@ export const cards = [
     tagCounts: { titan: 1 },
     baseVP: 3,
     value: 17,
+    strength: 5,
     image: IMG + "/assets/cards/monsters/ruins_2.webp",
   },
   {
@@ -1611,6 +1706,7 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 1,
     value: 17,
+    strength: 7,
     image: IMG + "/assets/cards/monsters/ruins_3.webp",
   },
   {
@@ -1620,6 +1716,7 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 4,
     value: 17,
+    strength: 8,
     image: IMG + "/assets/cards/monsters/ruins_4.webp",
   },
 
@@ -1630,6 +1727,8 @@ export const cards = [
     tagCounts: { wild: 1 },
     baseVP: 1,
     value: 18,
+    magic: 1,
+    strength: 1,
     image: IMG + "/assets/cards/monsters/sewer_1.webp",
   },
   {
@@ -1639,6 +1738,7 @@ export const cards = [
     tagCounts: { titan: 1 },
     baseVP: 2,
     value: 18,
+    strength: 4,
     image: IMG + "/assets/cards/monsters/sewer_2.webp",
   },
   {
@@ -1648,6 +1748,7 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 3,
     value: 18,
+    strength: 6,
     image: IMG + "/assets/cards/monsters/sewer_3.webp",
   },
   {
@@ -1657,6 +1758,8 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 4,
     value: 18,
+    magic: 2,
+    strength: 8,
     image: IMG + "/assets/cards/monsters/sewer_4.webp",
   },
 
@@ -1667,6 +1770,8 @@ export const cards = [
     tagCounts: { wild: 1 },
     baseVP: 2,
     value: 19,
+    magic: 1,
+    strength: 3,
     image: IMG + "/assets/cards/monsters/skerry_1.webp",
   },
   {
@@ -1676,6 +1781,8 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 4,
     value: 19,
+    magic: 2,
+    strength: 6,
     image: IMG + "/assets/cards/monsters/skerry_3.webp",
   },
   {
@@ -1685,6 +1792,8 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 6,
     value: 19,
+    magic: 5,
+    strength: 12,
     image: IMG + "/assets/cards/monsters/skerry_4.webp",
   },
   {
@@ -1694,6 +1803,8 @@ export const cards = [
     tagCounts: { minion: 1 },
     baseVP: 3,
     value: 20,
+    magic: 1,
+    strength: 4,
     image: IMG + "/assets/cards/monsters/swamp_1.webp",
   },
   {
@@ -1703,6 +1814,8 @@ export const cards = [
     tagCounts: { wild: 1 },
     baseVP: 4,
     value: 20,
+    magic: 3,
+    strength: 6,
     image: IMG + "/assets/cards/monsters/swamp_2.webp",
   },
   {
@@ -1712,6 +1825,8 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 3,
     value: 20,
+    magic: 8,
+    strength: 1,
     image: IMG + "/assets/cards/monsters/swamp_3.webp",
   },
   {
@@ -1721,6 +1836,8 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 6,
     value: 20,
+    magic: 4,
+    strength: 10,
     image: IMG + "/assets/cards/monsters/swamp_4.webp",
   },
 
@@ -1731,6 +1848,8 @@ export const cards = [
     tagCounts: { wild: 1 },
     baseVP: 1,
     value: 21,
+    magic: 2,
+    strength: 3,
     image: IMG + "/assets/cards/monsters/tundra_1.webp",
   },
   {
@@ -1740,6 +1859,8 @@ export const cards = [
     tagCounts: { titan: 1 },
     baseVP: 3,
     value: 21,
+    magic: 4,
+    strength: 5,
     image: IMG + "/assets/cards/monsters/tundra_2.webp",
   },
   {
@@ -1749,6 +1870,7 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 3,
     value: 21,
+    strength: 10,
     image: IMG + "/assets/cards/monsters/tundra_3.webp",
   },
   {
@@ -1758,6 +1880,8 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 5,
     value: 21,
+    magic: 5,
+    strength: 12,
     image: IMG + "/assets/cards/monsters/tundra_4.webp",
   },
 
@@ -1768,6 +1892,7 @@ export const cards = [
     tagCounts: { minion: 1 },
     baseVP: 1,
     value: 22,
+    strength: 3,
     image: IMG + "/assets/cards/monsters/undead_samurai_1.webp",
   },
   {
@@ -1777,6 +1902,8 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 3,
     value: 22,
+    magic: 3,
+    strength: 3,
     image: IMG + "/assets/cards/monsters/undead_samurai_3.webp",
   },
   {
@@ -1786,6 +1913,8 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 4,
     value: 22,
+    magic: 5,
+    strength: 5,
     image: IMG + "/assets/cards/monsters/undead_samurai_4.webp",
   },
 
@@ -1796,6 +1925,7 @@ export const cards = [
     tagCounts: { wild: 1 },
     baseVP: 2,
     value: 23,
+    strength: 4,
     image: IMG + "/assets/cards/monsters/valey_1.webp",
   },
   {
@@ -1805,6 +1935,7 @@ export const cards = [
     tagCounts: { titan: 1 },
     baseVP: 3,
     value: 23,
+    strength: 8,
     image: IMG + "/assets/cards/monsters/valey_2.webp",
   },
   {
@@ -1814,6 +1945,8 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 3,
     value: 23,
+    magic: 5,
+    strength: 5,
     image: IMG + "/assets/cards/monsters/valey_3.webp",
   },
   {
@@ -1823,6 +1956,7 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 6,
     value: 23,
+    strength: 12,
     image: IMG + "/assets/cards/monsters/valey_4.webp",
   },
 
@@ -1833,6 +1967,8 @@ export const cards = [
     tagCounts: { wild: 1 },
     baseVP: 3,
     value: 24,
+    magic: 1,
+    strength: 7,
     image: IMG + "/assets/cards/monsters/vulcano_1.webp",
   },
   {
@@ -1842,6 +1978,8 @@ export const cards = [
     tagCounts: { titan: 1 },
     baseVP: 3,
     value: 24,
+    magic: 4,
+    strength: 8,
     image: IMG + "/assets/cards/monsters/vulcano_2.webp",
   },
   {
@@ -1851,6 +1989,8 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 3,
     value: 24,
+    magic: 6,
+    strength: 3,
     image: IMG + "/assets/cards/monsters/vulcano_3.webp",
   },
   {
@@ -1860,6 +2000,8 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 6,
     value: 24,
+    magic: 6,
+    strength: 16,
     image: IMG + "/assets/cards/monsters/vulcano_4.webp",
   },
 
@@ -1870,6 +2012,8 @@ export const cards = [
     tagCounts: { minion: 1 },
     baseVP: 2,
     value: 25,
+    magic: 1,
+    strength: 3,
     image: IMG + "/assets/cards/monsters/woods_1.webp",
   },
   {
@@ -1879,6 +2023,7 @@ export const cards = [
     tagCounts: { wild: 1 },
     baseVP: 2,
     value: 25,
+    strength: 7,
     image: IMG + "/assets/cards/monsters/woods_2.webp",
   },
   {
@@ -1888,6 +2033,8 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 5,
     value: 25,
+    magic: 3,
+    strength: 10,
     image: IMG + "/assets/cards/monsters/woods_3.webp",
   },
   {
@@ -1897,6 +2044,8 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 6,
     value: 25,
+    magic: 6,
+    strength: 14,
     image: IMG + "/assets/cards/monsters/woods_4.webp",
   },
   {
@@ -1906,6 +2055,8 @@ export const cards = [
     tagCounts: { wild: 1 },
     baseVP: 3,
     value: 26,
+    magic: 7,
+    strength: 2,
     image: IMG + "/assets/cards/monsters/fire_temple_1.webp",
   },
   {
@@ -1915,6 +2066,8 @@ export const cards = [
     tagCounts: { wild: 1 },
     baseVP: 4,
     value: 26,
+    magic: 5,
+    strength: 9,
     image: IMG + "/assets/cards/monsters/fire_temple_2.webp",
   },
   {
@@ -1924,6 +2077,8 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 5,
     value: 26,
+    magic: 10,
+    strength: 4,
     image: IMG + "/assets/cards/monsters/fire_temple_3.webp",
   },
   {
@@ -1933,6 +2088,8 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 6,
     value: 26,
+    magic: 11,
+    strength: 11,
     image: IMG + "/assets/cards/monsters/fire_temple_4.webp",
   },
 
@@ -1943,6 +2100,7 @@ export const cards = [
     tagCounts: { minion: 1 },
     baseVP: 2,
     value: 27,
+    strength: 5,
     image: IMG + "/assets/cards/monsters/kaharian_1.webp",
   },
   {
@@ -1952,6 +2110,7 @@ export const cards = [
     tagCounts: { titan: 1 },
     baseVP: 2,
     value: 27,
+    strength: 9,
     image: IMG + "/assets/cards/monsters/kaharian_2.webp",
   },
   {
@@ -1961,6 +2120,8 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 0,
     value: 27,
+    magic: 6,
+    strength: 5,
     image: IMG + "/assets/cards/monsters/kaharian_3.webp",
   },
   {
@@ -1970,6 +2131,8 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 5,
     value: 27,
+    magic: 2,
+    strength: 10,
     image: IMG + "/assets/cards/monsters/kaharian_4.webp",
   },
   {
@@ -1978,6 +2141,8 @@ export const cards = [
     category: "monster",
     tagCounts: { wild: 1 },
     baseVP: 4,
+    magic: 3,
+    strength: 2,
     image: IMG + "/assets/cards/monsters/arhiteutis.webp",
   },
   {
@@ -1986,6 +2151,8 @@ export const cards = [
     category: "monster",
     tagCounts: { boss: 1 },
     baseVP: 5,
+    magic: 6,
+    strength: 6,
     image: IMG + "/assets/cards/monsters/brod_duhova.webp",
   },
   {
@@ -1994,6 +2161,8 @@ export const cards = [
     category: "monster",
     tagCounts: { titan: 1 },
     baseVP: 1,
+    magic: 5,
+    strength: 1,
     image: IMG + "/assets/cards/monsters/čarobnjak.webp",
   },
   {
@@ -2002,6 +2171,8 @@ export const cards = [
     category: "monster",
     tagCounts: { titan: 1 },
     baseVP: 3,
+    magic: 2,
+    strength: 10,
     image: IMG + "/assets/cards/monsters/divovi_ogra_plemena.webp",
   },
   {
@@ -2010,6 +2181,8 @@ export const cards = [
     category: "monster",
     tagCounts: { titan: 1 },
     baseVP: 2,
+    magic: 4,
+    strength: 2,
     image: IMG + "/assets/cards/monsters/iskvareni_redovnik.webp",
   },
   {
@@ -2018,6 +2191,7 @@ export const cards = [
     category: "monster",
     tagCounts: { minion: 1 },
     baseVP: 2,
+    strength: 6,
     image: IMG + "/assets/cards/monsters/jato_šišmiša.webp",
   },
   {
@@ -2026,6 +2200,7 @@ export const cards = [
     category: "monster",
     tagCounts: { minion: 1 },
     baseVP: 1,
+    strength: 6,
     image: IMG + "/assets/cards/monsters/kobold_kradljivci.webp",
   },
   {
@@ -2034,6 +2209,8 @@ export const cards = [
     category: "monster",
     tagCounts: { boss: 1 },
     baseVP: 6,
+    magic: 16,
+    strength: 6,
     image: IMG + "/assets/cards/monsters/levijatan.webp",
   },
   {
@@ -2042,6 +2219,8 @@ export const cards = [
     category: "monster",
     tagCounts: { minion: 1 },
     baseVP: 2,
+    magic: 3,
+    strength: 3,
     image: IMG + "/assets/cards/monsters/mimik.webp",
   },
   {
@@ -2050,6 +2229,8 @@ export const cards = [
     category: "monster",
     tagCounts: { minion: 1 },
     baseVP: 4,
+    magic: 3,
+    strength: 9,
     image: IMG + "/assets/cards/monsters/piratska_blokada.webp",
   },
 
@@ -2059,6 +2240,8 @@ export const cards = [
     category: "monster",
     tagCounts: { warden: 1 },
     baseVP: 1,
+    magic: 6,
+
     image: IMG + "/assets/cards/monsters/plamen_smrti.webp",
   },
   {
@@ -2067,6 +2250,7 @@ export const cards = [
     category: "monster",
     tagCounts: { minion: 1 },
     baseVP: 1,
+    strength: 6,
     image: IMG + "/assets/cards/monsters/pohlepnik.webp",
   },
   {
@@ -2075,6 +2259,8 @@ export const cards = [
     category: "monster",
     tagCounts: { titan: 1 },
     baseVP: 4,
+    magic: 3,
+    strength: 6,
     image: IMG + "/assets/cards/monsters/pošast.webp",
   },
   {
@@ -2083,6 +2269,7 @@ export const cards = [
     category: "monster",
     tagCounts: { titan: 1 },
     baseVP: 2,
+    strength: 10,
     image: IMG + "/assets/cards/monsters/proždrljivac.webp",
   },
   {
@@ -2091,6 +2278,8 @@ export const cards = [
     category: "monster",
     tagCounts: { titan: 1 },
     baseVP: 3,
+    magic: 2,
+    strength: 7,
     image: IMG + "/assets/cards/monsters/splačina.webp",
   },
   {
@@ -2099,6 +2288,7 @@ export const cards = [
     category: "monster",
     tagCounts: { minion: 1 },
     baseVP: 1,
+    strength: 2,
     image: IMG + "/assets/cards/monsters/sporaš.webp",
   },
   {
@@ -2107,6 +2297,8 @@ export const cards = [
     category: "monster",
     tagCounts: { wild: 1 },
     baseVP: 1,
+    magic: 2,
+    strength: 5,
     image: IMG + "/assets/cards/monsters/ungoliath.webp",
   },
   {
@@ -2115,6 +2307,8 @@ export const cards = [
     category: "monster",
     tagCounts: { titan: 1 },
     baseVP: 3,
+    magic: 2,
+    strength: 8,
     image: IMG + "/assets/cards/monsters/usisavač.webp",
   },
   {
@@ -2123,6 +2317,8 @@ export const cards = [
     category: "monster",
     tagCounts: { boss: 1 },
     baseVP: 5,
+    magic: 3,
+    strength: 14,
     image: IMG + "/assets/cards/monsters/vatreni_proždrljivac.webp",
   },
   {
@@ -2131,6 +2327,8 @@ export const cards = [
     category: "monster",
     tagCounts: { titan: 1 },
     baseVP: 4,
+    magic: 1,
+    strength: 10,
     image: IMG + "/assets/cards/monsters/velika_pijavica.webp",
   },
   {
@@ -2139,6 +2337,8 @@ export const cards = [
     category: "monster",
     tagCounts: { minion: 1 },
     baseVP: 4,
+    magic: 5,
+    strength: 7,
     image: IMG + "/assets/cards/monsters/vojska_kostura.webp",
   },
 ];
