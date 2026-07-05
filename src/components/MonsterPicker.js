@@ -75,12 +75,12 @@ export default function MonsterPicker({ onSelect, onClose }) {
     <div className="modal-overlay">
       <div className="monster-modal">
         {/* SEARCH */}
-        <input
+        {/* <input
           className="search-input"
           placeholder="Pretraži čudovište..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-        />
+        /> */}
 
         {/* TYPE FILTER */}
         <div className="monster-type-filter">

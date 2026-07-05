@@ -80,13 +80,13 @@ export default function DomainPicker({ onSelect, onClose }) {
     <div className="modal-overlay">
       <div className="domain-modal">
         {/* SEARCH */}
-        <input
+        {/* <input
           className="search-input"
           placeholder="Pretraži posjede..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-        />
-        <div className="domain-filters"> </div>
+        /> */}
+
         {/* TAG FILTERS */}
         <div className="domain-icon-filter">
           {availableTags.map((tag) => (

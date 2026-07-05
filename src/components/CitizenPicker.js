@@ -35,12 +35,12 @@ export default function CitizenPicker({ onSelect, onClose }) {
     <div className="modal-overlay">
       <div className="citizen-modal">
         {/* SEARCH */}
-        <input
+        {/* <input
           className="search-input"
           placeholder="Pretraži kartu..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-        />
+        /> */}
 
         {/* VALUE FILTER */}
         <div className="citizen-value-filter">

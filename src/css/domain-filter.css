@@ -36,9 +36,9 @@
   margin-bottom: 6px;
 }
 .gold-select {
-  height: 84px;
-  width: 72px;
-  font-size: 64px;
+  height: 68px;
+  width: 68px;
+  font-size: 62px;
   font-family: "Dwarf", sans-serif;
   opacity: 0.7;
 
@@ -51,6 +51,7 @@
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
+  text-align-last: center;
   color: white;
   -webkit-text-stroke: 3px #1e1e1e;
   border: none;

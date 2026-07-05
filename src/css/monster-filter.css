@@ -8,8 +8,8 @@
 }
 
 .monster-type-button {
-  width: 54px;
-  height: 54px;
+  width: 50px;
+  height: 50px;
 
   border: none;
   background: transparent;
@@ -34,13 +34,13 @@
   display: flex;
   flex-direction: row;
   margin-bottom: 6px;
-  gap: 16px;
+  gap: 8px;
 }
 
 .strength-select {
-  height: 84px;
-  width: 64px;
-  font-size: 64px;
+  height: 68px;
+  width: 58px;
+  font-size: 60px;
   font-family: "Dwarf", sans-serif;
   opacity: 0.7;
 
@@ -53,6 +53,7 @@
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
+  text-align-last: center;
   color: white;
   -webkit-text-stroke: 3px #1e1e1e;
   border: none;
@@ -69,9 +70,9 @@
   opacity: 1;
 }
 .magic-select {
-  height: 84px;
-  width: 72px;
-  font-size: 64px;
+  height: 68px;
+  width: 62px;
+  font-size: 60px;
   font-family: "Dwarf", sans-serif;
   opacity: 0.7;
   appearance: none;
@@ -83,6 +84,7 @@
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
+  text-align-last: center;
   color: white;
   -webkit-text-stroke: 3px #1e1e1e;
   border: none;
