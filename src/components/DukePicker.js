@@ -32,6 +32,7 @@ const FILTER_ORDER = [
 
 export default function DukePicker({ dukes, onSelect, onClose }) {
   const [selectedFilters, setSelectedFilters] = useState([]);
+  const isClearActive = selectedFilters.length > 0;
   const [search, setSearch] = useState("");
   const toggleFilter = (filter) => {
     setSelectedFilters((prev) =>
@@ -92,28 +93,27 @@ export default function DukePicker({ dukes, onSelect, onClose }) {
               <img src={ICONS[f]} alt={f} />
             </button>
           ))}
-          {selectedFilters.length > 0 && (
-            <button
-              className="clear-btn"
-              onClick={() => setSelectedFilters([])}
+          <button
+            className={`clear-btn ${!isClearActive ? "inactive" : ""}`}
+            onClick={() => setSelectedFilters([])}
+            disabled={!isClearActive}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="icon-style"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="24"
-                height="24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="icon-style"
-              >
-                <polyline points="9 18 3 12 9 6" />
-                <path d="M3 12h12a6 6 0 0 1 0 12" />
-              </svg>
-            </button>
-          )}
+              <polyline points="9 18 3 12 9 6" />
+              <path d="M3 12h12a6 6 0 0 1 0 12" />
+            </svg>
+          </button>
         </div>
 
         {/* DUKES */}

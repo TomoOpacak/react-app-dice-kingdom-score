@@ -1039,6 +1039,7 @@ export const cards = [
     tagCounts: { minion: 1 },
     baseVP: 1,
     value: 1,
+    strength: 2,
     image: IMG + "/assets/cards/monsters/barrens_1.webp",
   },
   {
@@ -1048,6 +1049,7 @@ export const cards = [
     tagCounts: { titan: 1 },
     baseVP: 3,
     value: 1,
+    strength: 3,
     image: IMG + "/assets/cards/monsters/barrens_2.webp",
   },
   {
@@ -1057,6 +1059,7 @@ export const cards = [
     tagCounts: { warden: 1 },
     baseVP: 1,
     value: 1,
+    strength: 5,
     image: IMG + "/assets/cards/monsters/barrens_3.webp",
   },
   {
@@ -1066,6 +1069,7 @@ export const cards = [
     tagCounts: { boss: 1 },
     baseVP: 5,
     value: 1,
+    strength: 7,
     image: IMG + "/assets/cards/monsters/barrens_4.webp",
   },
   {
