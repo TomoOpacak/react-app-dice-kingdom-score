@@ -369,7 +369,7 @@ export const cards = [
     category: "citizen",
     tagCounts: { worker: 1 },
     baseVP: 0,
-    value: 11,
+    value: 12,
     image: IMG + "/assets/cards/citizens/herald.webp",
   },
   {

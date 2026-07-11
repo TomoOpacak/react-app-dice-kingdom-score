@@ -5,7 +5,7 @@ export default function CitizenPicker({ onSelect, onClose }) {
   const [search, setSearch] = useState("");
   const [selectedValue, setSelectedValue] = useState(null);
 
-  const availableValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const availableValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
   useEffect(() => {
     setSelectedValue(null);
@@ -15,6 +15,8 @@ export default function CitizenPicker({ onSelect, onClose }) {
   const getFilterLabel = (value) => {
     if (value === 9) return "9/10";
     if (value === 10) return "11/12";
+    if (value === 11) return "7/8";
+    if (value === 12) return "x/=";
     return value;
   };
 
