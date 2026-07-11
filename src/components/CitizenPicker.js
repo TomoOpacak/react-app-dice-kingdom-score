@@ -5,7 +5,7 @@ export default function CitizenPicker({ onSelect, onClose }) {
   const [search, setSearch] = useState("");
   const [selectedValue, setSelectedValue] = useState(null);
 
-  const availableValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  const availableValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   useEffect(() => {
     setSelectedValue(null);

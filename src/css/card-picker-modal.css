@@ -180,8 +180,8 @@
 
 .citizen-value-filter {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 4px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
   margin-bottom: 10px;
   text {
     font-size: 72px;
@@ -206,5 +206,5 @@
 .citizen-filter-button.active {
   background-color: black;
   opacity: 1;
-  transform: scale(1.08);
+  transform: scale(1.1);
 }
