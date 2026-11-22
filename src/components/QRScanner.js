@@ -58,15 +58,24 @@ export default function QRScanner({ onScan, onClose }) {
     <div className="qr-scanner">
       <h3>Skeniraj QR kod</h3>
 
-      <video ref={videoRef} className="qr-scanner-video" muted playsInline />
+      <div className="qr-scanner-camera">
+        <video ref={videoRef} className="qr-scanner-video" muted playsInline />
 
-      {error && (
-        <p className="qr-scanner-error">
-          Nije moguće pristupiti kameri. Provjeri dozvole kamere.
-        </p>
+        {!error && (
+          <div className="qr-scanner-frame">
+            <span className="corner top-left" />
+            <span className="corner top-right" />
+            <span className="corner bottom-left" />
+            <span className="corner bottom-right" />
+          </div>
+        )}
+      </div>
+
+      {error ? (
+        <p className="qr-scanner-error">{error}</p>
+      ) : (
+        <p>Stavi QR kod unutar okvira.</p>
       )}
-
-      {!error && <p>Stavi QR kod ispred kamere.</p>}
 
       <button type="button" className="close-btn" onClick={onClose}>
         ZATVORI

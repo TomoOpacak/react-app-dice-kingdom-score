@@ -3,6 +3,7 @@
 @import "duke-picker.css";
 @import "monster-filter.css";
 @import "domain-filter.css";
+@import "qr-scanner.css";
 * {
   margin: 0;
   padding: 0;

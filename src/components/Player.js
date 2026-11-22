@@ -10,6 +10,7 @@ import { preloadImages } from "../game/preloadImages";
 import SendResultButton from "./SendResultButton";
 import ImportGameModal from "./ImportGameModal";
 import QRScanner from "./QRScanner";
+
 import { t } from "../data/labels";
 import "../css/style.css";
 
