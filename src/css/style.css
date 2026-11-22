@@ -546,3 +546,26 @@ li {
     transform: rotate(0deg);
   }
 }
+.add-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.scan-card-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background: #277a42;
+  color: white;
+  cursor: pointer;
+}
+
+.scan-card-button:active {
+  transform: scale(0.95);
+}

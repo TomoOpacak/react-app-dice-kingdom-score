@@ -9,7 +9,7 @@ import WakeLockButton from "./WakeLockButton";
 import { preloadImages } from "../game/preloadImages";
 import SendResultButton from "./SendResultButton";
 import ImportGameModal from "./ImportGameModal";
-
+import QRScanner from "./QRScanner";
 import { t } from "../data/labels";
 import "../css/style.css";
 
@@ -80,6 +80,8 @@ export default function Player({ name }) {
   const [showScore, setShowScore] = useState(false);
   const [picker, setPicker] = useState(null);
   const [showDukePicker, setShowDukePicker] = useState(false);
+  const [showQRScanner, setShowQRScanner] = useState(false);
+  const [scanCategory, setScanCategory] = useState(null);
   const [expandedStacks, setExpandedStacks] = useState({});
   const [vpAnimation, setVpAnimation] = useState(null);
   const handleImportGame = () => {
@@ -153,7 +155,37 @@ export default function Player({ name }) {
     setPlayerCards((prev) => [...prev, newCard]);
     setPicker(null);
   };
+  const openQRScanner = (category) => {
+    setScanCategory(category);
+    setShowQRScanner(true);
+  };
 
+  const handleQRScan = (qrValue) => {
+    const scannedId = qrValue.trim();
+
+    if (scanCategory === "duke") {
+      const scannedDuke = dukes.find((d) => String(d.id) === scannedId);
+
+      if (scannedDuke) {
+        setDuke(scannedDuke);
+      } else {
+        alert("QR kod ne odgovara plemiću!");
+      }
+    } else {
+      const scannedCard = cards.find(
+        (c) => String(c.id) === scannedId && c.category === scanCategory,
+      );
+
+      if (scannedCard) {
+        addCard(scannedCard);
+      } else {
+        alert("QR kod ne odgovara ovoj kategoriji karata!");
+      }
+    }
+
+    setShowQRScanner(false);
+    setScanCategory(null);
+  };
   const removeCard = (instanceId) => {
     setPlayerCards((prev) => prev.filter((c) => c.instanceId !== instanceId));
   };
@@ -279,12 +311,78 @@ export default function Player({ name }) {
             );
           })}
         </div>
-        <button
-          className={`${className}-button`}
-          onClick={() => setPicker(category)}
-        >
-          +
-        </button>
+        <div className="add-card-actions">
+          <button
+            className={`${className}-button`}
+            onClick={() => setPicker(category)}
+          >
+            +
+          </button>
+
+          <button
+            className={`${className}-button`}
+            onClick={() => openQRScanner(category)}
+            aria-label={`Scan ${category} QR code`}
+            title="Scan QR code"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="48"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="square"
+              strokeLinejoin="miter"
+              aria-hidden="true"
+            >
+              {/* Top-left finder square */}
+              <rect x="3" y="3" width="6" height="6" />
+              <rect
+                x="5"
+                y="5"
+                width="2"
+                height="2"
+                fill="currentColor"
+                stroke="none"
+              />
+
+              {/* Top-right finder square */}
+              <rect x="15" y="3" width="6" height="6" />
+              <rect
+                x="17"
+                y="5"
+                width="2"
+                height="2"
+                fill="currentColor"
+                stroke="none"
+              />
+
+              {/* Bottom-left finder square */}
+              <rect x="3" y="15" width="6" height="6" />
+              <rect
+                x="5"
+                y="17"
+                width="2"
+                height="2"
+                fill="currentColor"
+                stroke="none"
+              />
+
+              {/* QR data blocks */}
+              <path d="M12 3v3M12 9v3M15 12h3M21 12v3M12 15h3M15 18h3M21 18v3" />
+              <rect
+                x="12"
+                y="18"
+                width="2"
+                height="2"
+                fill="currentColor"
+                stroke="none"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
     );
   };
@@ -455,12 +553,78 @@ export default function Player({ name }) {
                 </button>
               </div>
             ) : (
-              <button
-                className="duke-button"
-                onClick={() => setShowDukePicker(true)}
-              >
-                +
-              </button>
+              <div className="add-card-actions">
+                <button
+                  className="duke-button"
+                  onClick={() => setShowDukePicker(true)}
+                >
+                  +
+                </button>
+
+                <button
+                  className="duke-button"
+                  onClick={() => openQRScanner("duke")}
+                  aria-label="Scan duke QR code"
+                  title="Scan QR code"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="square"
+                    strokeLinejoin="miter"
+                    aria-hidden="true"
+                  >
+                    {/* Top-left finder square */}
+                    <rect x="3" y="3" width="6" height="6" />
+                    <rect
+                      x="5"
+                      y="5"
+                      width="2"
+                      height="2"
+                      fill="currentColor"
+                      stroke="none"
+                    />
+
+                    {/* Top-right finder square */}
+                    <rect x="15" y="3" width="6" height="6" />
+                    <rect
+                      x="17"
+                      y="5"
+                      width="2"
+                      height="2"
+                      fill="currentColor"
+                      stroke="none"
+                    />
+
+                    {/* Bottom-left finder square */}
+                    <rect x="3" y="15" width="6" height="6" />
+                    <rect
+                      x="5"
+                      y="17"
+                      width="2"
+                      height="2"
+                      fill="currentColor"
+                      stroke="none"
+                    />
+
+                    {/* QR data blocks */}
+                    <path d="M12 3v3M12 9v3M15 12h3M21 12v3M12 15h3M15 18h3M21 18v3" />
+                    <rect
+                      x="12"
+                      y="18"
+                      width="2"
+                      height="2"
+                      fill="currentColor"
+                      stroke="none"
+                    />
+                  </svg>
+                </button>
+              </div>
             )}
           </div>
 
@@ -1012,6 +1176,19 @@ export default function Player({ name }) {
               />
             </button>
           </div>
+          {showQRScanner && (
+            <div className="modal-overlay">
+              <div className="modal">
+                <QRScanner
+                  onScan={handleQRScan}
+                  onClose={() => {
+                    setShowQRScanner(false);
+                    setScanCategory(null);
+                  }}
+                />
+              </div>
+            </div>
+          )}
           {picker && (
             <CardPicker
               category={picker}
