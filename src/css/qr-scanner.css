@@ -11,9 +11,34 @@
   aspect-ratio: 4 / 5;
   overflow: hidden;
   border-radius: 12px;
-  background: transparent;
+  background: #000;
   flex-shrink: 0;
   contain: layout paint;
+}
+
+/* Camera video */
+.qr-scanner-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* QR scanning frame */
+.qr-scanner-frame {
+  position: absolute;
+  width: min(72%, 260px);
+  aspect-ratio: 1 / 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 999px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
 }
 
 .qr-scanner-frame .corner {
