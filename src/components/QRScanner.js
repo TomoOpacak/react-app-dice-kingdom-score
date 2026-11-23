@@ -50,6 +50,13 @@ export default function QRScanner({ onScan, onClose }) {
         const video = videoRef.current;
 
         if (video) {
+          const hideLoading = () => {
+            setTimeout(() => {
+              if (!disposed) {
+                setIsLoading(false);
+              }
+            }, 500);
+          };
           if (video.readyState >= 2) {
             setIsLoading(false);
           } else {
