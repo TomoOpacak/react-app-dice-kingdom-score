@@ -7,7 +7,6 @@ export default function QRScanner({ onScan, onClose }) {
   const onScanRef = useRef(onScan);
 
   const [error, setError] = useState("");
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     onScanRef.current = onScan;
@@ -37,30 +36,10 @@ export default function QRScanner({ onScan, onClose }) {
 
         if (disposed || alreadyScanned) {
           controls.stop();
-          return;
-        }
-
-        const video = videoRef.current;
-
-        if (video) {
-          if (video.readyState >= 2) {
-            setIsLoading(false);
-          } else {
-            video.addEventListener(
-              "loadeddata",
-              () => {
-                if (!disposed) {
-                  setIsLoading(false);
-                }
-              },
-              { once: true },
-            );
-          }
         }
       } catch (err) {
         if (!disposed) {
           setError("Nije moguće pristupiti kameri. Provjeri dozvole kamere.");
-          setIsLoading(false);
         }
       }
     }
@@ -82,19 +61,7 @@ export default function QRScanner({ onScan, onClose }) {
       <h3>Skeniraj QR kod</h3>
 
       <div className="qr-scanner-camera">
-        <video
-          ref={videoRef}
-          className={`qr-scanner-video ${!isLoading ? "ready" : ""}`}
-          muted
-          playsInline
-        />
-
-        {isLoading && !error && (
-          <div className="qr-scanner-loading">
-            <div className="qr-scanner-spinner" />
-            <span>Pokretanje kamere...</span>
-          </div>
-        )}
+        <video ref={videoRef} className="qr-scanner-video" muted playsInline />
 
         {!error && (
           <div className="qr-scanner-frame">
