@@ -5,6 +5,32 @@
   width: 100%;
 }
 
+.qr-scanner-camera {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #000;
+  isolation: isolate;
+}
+
+.qr-scanner-video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: cover;
+  object-position: center;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
 /* QR scanning frame */
 .qr-scanner-frame {
   position: absolute;
