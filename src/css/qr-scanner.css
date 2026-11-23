@@ -11,7 +11,7 @@
   aspect-ratio: 4 / 5;
   overflow: hidden;
   border-radius: 12px;
-  background: #000;
+  background: black;
   flex-shrink: 0;
   contain: layout paint;
 }
@@ -24,7 +24,6 @@
   object-fit: cover;
   object-position: center;
   opacity: 0;
-  transition: opacity 250ms ease;
 }
 
 .qr-scanner-video.ready {
