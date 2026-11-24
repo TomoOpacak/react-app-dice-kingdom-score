@@ -67,7 +67,13 @@ export default function QRScanner({ onScan, onClose }) {
       <h3>Skeniraj QR kod</h3>
 
       <div className="qr-scanner-camera">
-        <video ref={videoRef} className="qr-scanner-video" muted playsInline />
+        <video
+          ref={videoRef}
+          className="qr-scanner-video"
+          muted
+          playsInline
+          autoPlay
+        />
 
         {!error && (
           <div className="qr-scanner-frame">
