@@ -31,11 +31,6 @@ export default function QRScanner({ onScan, onClose }) {
         );
 
         controlsRef.current = controls;
-        const video = videoRef.current;
-
-        if (video) {
-          await video.play();
-        }
 
         if (disposed || alreadyScanned) {
           controls.stop();
