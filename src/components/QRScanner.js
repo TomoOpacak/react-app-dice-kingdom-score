@@ -18,16 +18,8 @@ export default function QRScanner({ onScan, onClose }) {
 
     async function startScanner() {
       try {
-        const controls = await reader.decodeFromConstraints(
-          {
-            video: {
-              facingMode: { ideal: "environment" },
-              width: { ideal: 720 },
-              height: { ideal: 900 },
-              aspectRatio: { ideal: 4 / 5 },
-            },
-            audio: false,
-          },
+        const controls = await reader.decodeFromVideoDevice(
+          undefined,
           videoRef.current,
           (result) => {
             if (result && !alreadyScanned && !disposed) {
