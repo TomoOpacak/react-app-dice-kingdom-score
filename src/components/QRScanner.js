@@ -55,7 +55,7 @@ export default function QRScanner({ onScan, onClose }) {
               if (!disposed) {
                 setIsLoading(false);
               }
-            }, 500);
+            }, 1500);
           };
 
           const video = videoRef.current;
