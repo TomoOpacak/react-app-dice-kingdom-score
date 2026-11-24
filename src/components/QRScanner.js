@@ -55,8 +55,18 @@ export default function QRScanner({ onScan, onClose }) {
               if (!disposed) {
                 setIsLoading(false);
               }
-            }, 1500);
+            }, 500);
           };
+
+          const video = videoRef.current;
+
+          if (video) {
+            if (video.readyState >= 2) {
+              hideLoading();
+            } else {
+              video.addEventListener("playing", hideLoading, { once: true });
+            }
+          }
           if (video.readyState >= 2) {
             setIsLoading(false);
           } else {
