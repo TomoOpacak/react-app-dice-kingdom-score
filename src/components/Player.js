@@ -729,11 +729,11 @@ export default function Player({ name }) {
             <div className="modal-overlay">
               <div className="modal">
                 <h3 className="score-row">
-                  Ukupno:{" "}
+                  {" "}
                   <svg
                     className="vp-inline-icon"
-                    width="50"
-                    height="54"
+                    width="250"
+                    height="266"
                     viewBox="0 0 100 108"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -780,7 +780,8 @@ export default function Player({ name }) {
                       stroke="#1e1e1e"
                       strokeWidth="6"
                       paintOrder="stroke" // 👈 important
-                      fontSize="42"
+                      fontSize="64"
+                      fontWeight="normal"
                     >
                       {score.total}
                     </text>
@@ -824,7 +825,7 @@ export default function Player({ name }) {
                     </defs>
                   </svg>
                 </h3>
-
+                <h3 className="score-row">DETALJI:</h3>
                 <ul>
                   {score.breakdown
                     .filter((b) => b.type === "bonus")

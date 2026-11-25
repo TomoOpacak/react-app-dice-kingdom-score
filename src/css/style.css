@@ -386,6 +386,7 @@ li {
 }
 .score-row {
   display: flex;
+
   align-items: center; /* 👈 vertical center */
   gap: 6px;
 }
