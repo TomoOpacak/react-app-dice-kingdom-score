@@ -1157,7 +1157,7 @@ export default function Player({ name }) {
           )}
           <div className="score-btn-row">
             <button className="start-button" onClick={() => setShowScore(true)}>
-              REZULTAT
+              DETALJI
             </button>
             <button
               className="end-btn"
